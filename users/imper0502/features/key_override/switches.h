@@ -1,0 +1,10 @@
+/* Key overrides. They need KEY_OVERRIDE_ENABLE = yes. */
+#pragma once
+
+#ifndef IMPER0502_OVERRIDE_PUNCT    /* Shift + , . / */
+#    define IMPER0502_OVERRIDE_PUNCT 0
+#endif
+
+#if IMPER0502_OVERRIDE_PUNCT && !defined(KEY_OVERRIDE_ENABLE)
+#    error "IMPER0502_OVERRIDE_PUNCT is on but KEY_OVERRIDE_ENABLE is not yes"
+#endif

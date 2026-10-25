@@ -1,6 +1,14 @@
 #include "imper0502.h"
 
 __attribute__ ((weak))
+void matrix_scan_user(void) {
+#if IMPER0502_TD_THUMB
+    idle_timer_task();
+#endif
+    led_indicators_task();
+}
+
+__attribute__ ((weak))
 void keyboard_post_init_user(void) {
 #ifdef CONSOLE_ENABLE
     debug_enable = true;

@@ -13,17 +13,17 @@
 #define DUMMY_MOD_NEUTRALIZER_KEYCODE KC_RIGHT_CTRL
 #define MODS_TO_NEUTRALIZE { MOD_BIT(KC_LEFT_ALT), MOD_BIT(KC_RIGHT_ALT), MOD_BIT(KC_LEFT_GUI), MOD_BIT(KC_RIGHT_GUI)}
 
-/* Tap Dance Keys Toggle */
-#define THUMB_DANCE_ENABLE
-#define MINUS_DANCE_ENABLE false
-#define GRAVE_DANCE_ENABLE true
-#define BACKSLASH_DANCE_ENABLE false
-#define TABLE_DANCE_ENABLE false
-#define INSERT_PLUS_DANCE_ENABLE true
-#define ALT_TABLE_DANCE_ENABLE false
-
-/* Key Override Toggle (1 = on, 0 = off) */
-#define PUNCT_OVERRIDE_ENABLE 1
+/* Feature switches: 1 = on, 0 = off. Defaults are in the switches.h in each folder of users/imper0502/features */
+#define IMPER0502_TD_THUMB 1
+#define IMPER0502_TD_GRAVE 1
+#define IMPER0502_TD_INSERT_PLUS 1
+#define IMPER0502_TD_ALT_PLUS 0
+#define IMPER0502_TD_MINUS 0
+#define IMPER0502_TD_BACKSLASH 0
+#define IMPER0502_TD_TABLE 0
+#define IMPER0502_TD_ALT_TABLE 0
+#define IMPER0502_TD_COMMA_DOT 0
+#define IMPER0502_OVERRIDE_PUNCT 0
 
 /* Mouse Keys Config. */
 #define MK_KINETIC_SPEED

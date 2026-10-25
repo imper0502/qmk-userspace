@@ -2,34 +2,36 @@
 #pragma once
 
 enum tap_dance_names {
-#ifdef THUMB_DANCE_ENABLE
+#if IMPER0502_TD_THUMB
     CONTROL_DANCE,
     ENTER_DANCE,
     SPACE_DANCE,
 #endif
-#ifdef ALT_PLUS_DANCE_ENABLE
+#if IMPER0502_TD_ALT_PLUS
     ALT_PLUS,
 #endif
-#ifdef MINUS_DANCE_ENABLE
+#if IMPER0502_TD_MINUS
     MINUS_DANCE,
 #endif
-#ifdef GRAVE_DANCE_ENABLE
+#if IMPER0502_TD_GRAVE
     GRAVE_DANCE,
 #endif
-#ifdef BACKSLASH_DANCE_ENABLE
+#if IMPER0502_TD_BACKSLASH
     BACKSLASH_DANCE,
 #endif
-#ifdef TABLE_DANCE_ENABLE
+#if IMPER0502_TD_TABLE
     TABLE_DANCE,
 #endif
-#ifdef INSERT_PLUS_DANCE_ENABLE 
+#if IMPER0502_TD_INSERT_PLUS
     INSERT_PLUS,
 #endif
-#ifdef ALT_TABLE_DANCE_ENABLE    
+#if IMPER0502_TD_ALT_TABLE
     ALT_TABLE,
 #endif
+#if IMPER0502_TD_COMMA_DOT
     COMMA_DANCE,
     DOT_DANCE,
+#endif
 };
 
 /* Tap Dance */
@@ -43,7 +45,7 @@ typedef enum {
 
 td_state_t current_dance(tap_dance_state_t *state);
 
-#ifdef THUMB_DANCE_ENABLE
+#if IMPER0502_TD_THUMB
 void td_left_control_finished(tap_dance_state_t *state, void *user_data);
 void td_left_control_plus_reset(tap_dance_state_t *state, void *user_data);
 
@@ -54,37 +56,37 @@ void td_space_each_tap(tap_dance_state_t *state, void *user_data);
 void td_space_finished(tap_dance_state_t *state, void *user_data);
 void td_space_reset(tap_dance_state_t *state, void *user_data);
 #endif
-#ifdef ALT_PLUS_DANCE_ENABLE
+#if IMPER0502_TD_ALT_PLUS
 void td_alt_plus_finished(tap_dance_state_t *state, void *user_data);
 void td_alt_plus_reset(tap_dance_state_t *state, void *user_data);
 #endif
 
-#ifdef MINUS_DANCE_ENABLE
+#if IMPER0502_TD_MINUS
 void td_minus_finished(tap_dance_state_t *state, void *user_data);
 void td_minus_reset(tap_dance_state_t *state, void *user_data);
 #endif
-#ifdef GRAVE_DANCE_ENABLE
+#if IMPER0502_TD_GRAVE
 void td_grave_finished(tap_dance_state_t *state, void *user_data);
 void td_grave_reset(tap_dance_state_t *state, void *user_data);
 #endif
-#ifdef BACKSLASH_DANCE_ENABLE
+#if IMPER0502_TD_BACKSLASH
 void td_backslash_finished(tap_dance_state_t *state, void *user_data);
 void td_backslash_reset(tap_dance_state_t *state, void *user_data);
 #endif
-#ifdef TABLE_DANCE_ENABLE
+#if IMPER0502_TD_TABLE
 void td_table_finished(tap_dance_state_t *state, void *user_data);
 void td_table_reset(tap_dance_state_t *state, void *user_data);
 #endif
-#ifdef INSERT_PLUS_DANCE_ENABLE
+#if IMPER0502_TD_INSERT_PLUS
 void td_insert_plus_finished(tap_dance_state_t *state, void *user_data);
 void td_insert_plus_reset(tap_dance_state_t *state, void *user_data);
 #endif
-#ifdef ALT_TABLE_DANCE_ENABLE
+#if IMPER0502_TD_ALT_TABLE
 void td_alt_tab_each_tap(tap_dance_state_t *state, void *user_data);
 void td_alt_tab_finished(tap_dance_state_t *state, void *user_data);
 #endif
 
-#ifdef THUMB_DANCE_ENABLE
+#if IMPER0502_TD_THUMB
 #define TD_LCTL TD(CONTROL_DANCE)
 #define TD_ENT  TD(ENTER_DANCE)
 #define TD_SPC  TD(SPACE_DANCE)

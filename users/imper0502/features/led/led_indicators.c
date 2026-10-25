@@ -1,4 +1,4 @@
-/* RX/TX LED indicators (caps lock and active layer); also polls the idle timer. */
+/* RX/TX LED indicators (caps lock and active layer). */
 
 #include "imper0502.h"
 
@@ -21,10 +21,7 @@ uint16_t _timer = 0;
 bool next_led_pins_state = !LED_PIN_ON_STATE;
 #endif
 
-void matrix_scan_user(void) {
-    if (!is_idle_timeout) {
-        is_idle_timeout = timer_elapsed(is_idle_timer) > TAPPING_TERM;
-    }
+void led_indicators_task(void) {
 #if defined(LED_PIN_ON_STATE) && defined(TXLED) && defined(RXLED)
     switch (tx_led_status) {
     case ON:
