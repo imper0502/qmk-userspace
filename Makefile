@@ -18,7 +18,7 @@ docker_run := docker run -it --rm \
 	$(image_name):$(image_tag)
 overlay := qmk config user.overlay_dir=/userspace
 
-.PHONY: install uninstall clean compile shell submodules
+.PHONY: install uninstall clean compile shell submodules test
 
 install: submodules
 	docker pull $(image_name):$(image_tag)
@@ -38,6 +38,13 @@ shell: submodules
 uninstall: clean
 	docker volume rm $(volume)
 	docker image rm $(image_name):$(image_tag)
+
+# QMK 的單元測試只認 qmk_firmware/tests，所以把 tests/ 與被測的 users/ 掛進去
+test:
+	docker run -it --rm -v $(volume):/qmk_firmware \
+		-v "$(CURDIR)/tests/imper0502":/qmk_firmware/tests/imper0502 \
+		-v "$(CURDIR)/users/imper0502":/qmk_firmware/users/imper0502 \
+		$(image_name):$(image_tag) sh -c "cd /qmk_firmware && make test:imper0502"
 
 clean:
 	rm -f *.hex *.bin *.uf2

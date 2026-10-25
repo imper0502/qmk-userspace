@@ -45,9 +45,18 @@ qmk userspace-compile
 make install                                  # 取得 image 並 clone qmk_firmware 到 volume
 make compile keyboard=pragmatic keymap=imper0502
 make shell                                    # 進入已設定 overlay 的 bash
+make test                                     # 執行 tests/imper0502 的 QMK 單元測試
 make clean
 make uninstall
 ```
+
+## Tests
+`tests/imper0502/` 是 [QMK 單元測試](https://docs.qmk.fm/unit_testing)(googletest),只測 tap dance 的核心邏輯,不測鍵位:
+
+- `current_dance()` 依 tap 次數、按住與被打斷回傳的狀態。
+- 每個 tap dance(Control、Enter、Space、Grave、Insert plus)在每種 tap 次數、點按或按住之後,都不會留下卡住的按鍵或修飾鍵。
+
+QMK 只在 `qmk_firmware/tests/` 底下找測試,所以 `make test` 與 devcontainer 會把 `tests/imper0502` 和 `users/imper0502` 掛進去,在容器內執行 `make test:imper0502`。
 
 ## License
 本專案以 GPL-2.0-or-later 授權(全文見 `LICENSE`),各原始碼檔案以檔頭標示為準。`keyboards/pragmatic*` 衍生自 James Sa 的作品。

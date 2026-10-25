@@ -26,7 +26,10 @@
     "source=${localWorkspaceFolder}/layouts/split_4x6_5,target=/qmk_firmware/layouts/default/split_4x6_5,type=bind",
     "source=${localWorkspaceFolder}/layouts/split_4x6_3,target=/qmk_firmware/layouts/default/split_4x6_3,type=bind",
     "source=${localWorkspaceFolder}/layouts/split_4x6_4,target=/qmk_firmware/layouts/default/split_4x6_4,type=bind",
-    "source=${localWorkspaceFolder}/layouts/split_6x6,target=/qmk_firmware/layouts/default/split_6x6,type=bind"
+    "source=${localWorkspaceFolder}/layouts/split_6x6,target=/qmk_firmware/layouts/default/split_6x6,type=bind",
+    // 單元測試（make test:imper0502）只認 qmk_firmware/tests，被測的程式在 users/
+    "source=${localWorkspaceFolder}/tests/imper0502,target=/qmk_firmware/tests/imper0502,type=bind",
+    "source=${localWorkspaceFolder}/users/imper0502,target=/qmk_firmware/users/imper0502,type=bind"
   ],
   "containerEnv": {
     "QMK_HOME": "/qmk_firmware"
