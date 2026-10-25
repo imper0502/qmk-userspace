@@ -9,6 +9,18 @@ layouts/<layout>/<keymap>/       # 依 layout 共用的 keymap（layout 需另�
 users/<keymap>/                  # 同名 keymap 自動引入的 userspace
 ```
 
+## Keymaps
+
+| layout | keymap | 說明 |
+|---|---|---|
+| `split_4x6_5` | `default`、`via` | temperance 的 QWERTY 與 VIA keymap |
+| `split_4x6_4` | `imper0502` | 56 鍵,pragmatic 與 temperance 使用 |
+| `split_4x6_3` | `imper0502` | 54 鍵 |
+| `split_4x6_2x3` | `imper0502` | 60 鍵,目前沒有鍵盤使用 |
+| `split_6x6` | `default`、`imper0502`、`transposed`、`handdown`、`numpad` | pragmatic_classical 的 keymap |
+
+`imper0502` keymap 共用 `users/imper0502`,功能開關的說明見 [users/imper0502/readme.md](users/imper0502/readme.md)。
+
 ## Clone
 鍵盤是 git submodule：
 
