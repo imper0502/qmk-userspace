@@ -5,11 +5,11 @@
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
 #if IMPER0502_TD_ALT_TABLE
-    case TD_TABA:
+    case TD(ALT_TABLE):
         return TAPPING_TERM * 4;
 #endif
 #if IMPER0502_TD_INSERT_PLUS
-    case TD_INSP:
+    case TD(INSERT_PLUS):
 #endif
     case MT_BSPC:
     case LT_BTN3:

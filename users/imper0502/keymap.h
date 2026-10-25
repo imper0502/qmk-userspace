@@ -26,6 +26,21 @@
 #define LA_LCTL LALT(KC_LCTL)
 #define RA_RCTL RALT(KC_RCTL)
 
+/* Tap dance keys: each exists only while its IMPER0502_TD_* switch is 1. */
+#if IMPER0502_TD_THUMB
+#define TD_LCTL TD(CONTROL_DANCE)
+#define TD_ENT  TD(ENTER_DANCE)
+#define TD_SPC  TD(SPACE_DANCE)
+#endif
+#if IMPER0502_TD_INSERT_PLUS
+#define TD_INSP TD(INSERT_PLUS)
+#endif
+#if IMPER0502_TD_ALT_PLUS
+#define TD_ALTP TD(ALT_PLUS)
+#endif
+#if IMPER0502_TD_ALT_TABLE
+#define TD_TABA TD(ALT_TABLE)
+#endif
 #if IMPER0502_TD_MINUS
 #define TD_MINS TD(MINUS_DANCE)
 #endif

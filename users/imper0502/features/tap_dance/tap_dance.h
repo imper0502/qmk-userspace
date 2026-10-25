@@ -86,8 +86,3 @@ void td_alt_tab_each_tap(tap_dance_state_t *state, void *user_data);
 void td_alt_tab_finished(tap_dance_state_t *state, void *user_data);
 #endif
 
-#if IMPER0502_TD_THUMB
-#define TD_LCTL TD(CONTROL_DANCE)
-#define TD_ENT  TD(ENTER_DANCE)
-#define TD_SPC  TD(SPACE_DANCE)
-#endif
