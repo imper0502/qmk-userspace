@@ -24,6 +24,7 @@
     "source=${localWorkspaceFolder}/keyboards/temperance,target=/qmk_firmware/keyboards/temperance,type=bind",
     // QMK 只在 qmk_firmware/layouts/default 驗證 community_layouts，layout 也需各自掛載
     "source=${localWorkspaceFolder}/layouts/split_4x6_5,target=/qmk_firmware/layouts/default/split_4x6_5,type=bind",
+    "source=${localWorkspaceFolder}/layouts/split_4x6_2x3,target=/qmk_firmware/layouts/default/split_4x6_2x3,type=bind",
     "source=${localWorkspaceFolder}/layouts/split_4x6_3,target=/qmk_firmware/layouts/default/split_4x6_3,type=bind",
     "source=${localWorkspaceFolder}/layouts/split_4x6_4,target=/qmk_firmware/layouts/default/split_4x6_4,type=bind",
     "source=${localWorkspaceFolder}/layouts/split_6x6,target=/qmk_firmware/layouts/default/split_6x6,type=bind",
