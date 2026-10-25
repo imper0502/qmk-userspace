@@ -34,6 +34,13 @@ typedef enum {
     OTHERWISE
 } td_state_t;
 
+/* The dance ended while the key was held, or cut short by another key, during the 1st, 2nd or 3rd press.
+ * Use these in a case label rather than spelling the range out: they rely on the order of td_state_t above,
+ * which tap_dance.c checks. */
+#define TD_HOLD_1 TAPPING ... JUST_HOLD
+#define TD_HOLD_2 DUAL_TAPPING ... TAP_AND_HOLD
+#define TD_HOLD_3 TRI_TAPPING ... TAP_TAP_HOLD
+
 td_state_t current_dance(tap_dance_state_t *state);
 
 #if IMPER0502_TD_THUMB

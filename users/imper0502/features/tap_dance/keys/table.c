@@ -8,41 +8,44 @@ static td_state_t td_table_state;
 void td_table_finished(tap_dance_state_t *state, void *user_data) {
     td_table_state = current_dance(state);
     switch (td_table_state) {
-    case TAPPING ... JUST_HOLD:
+    case TD_HOLD_1:
         register_mods(MOD_LCTL);
         layer_on(_FN);
         break;
-    case DUAL_TAPPING ... TAP_AND_HOLD:
+    case TD_HOLD_2:
         register_mods(MOD_LSFT|MOD_LCTL);
         layer_on(_FN);
         break;
-    case TRI_TAPPING ... TAP_TAP_HOLD:
+    case TD_HOLD_3:
         register_mods(MOD_LSFT);
         layer_on(_FN);
         break;
-    case TRI_TAP:
-        tap_code(KC_TAB);
     case DUAL_TAP:
-        tap_code(KC_TAB);
-    case JUST_TAP:
+    case TRI_TAP:
+        /* All taps but the last are tapped now, the last one stays down until reset. */
+        for (uint8_t n = 1; n < state->count; n++) {
+            tap_code(KC_TAB);
+        }
+        register_code(KC_TAB);
+        break;
     default:
-        register_code(KC_TAB); 
-        return;
+        register_code(KC_TAB);
+        break;
     }
     return;
 }
 
 void td_table_reset(tap_dance_state_t *state, void *user_data) {
     switch (td_table_state) {
-    case TAPPING ... JUST_HOLD:
+    case TD_HOLD_1:
         layer_off(_FN); 
         unregister_mods(MOD_LCTL);
         break;
-    case DUAL_TAPPING ... TAP_AND_HOLD:
+    case TD_HOLD_2:
         layer_off(_FN);
         unregister_mods(MOD_LSFT|MOD_LCTL);
         break;
-    case TRI_TAPPING ... TAP_TAP_HOLD:
+    case TD_HOLD_3:
         layer_off(_FN);
         unregister_mods(MOD_LSFT);
         break;

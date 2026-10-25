@@ -2,6 +2,11 @@
 
 #include "imper0502.h"
 
+/* TD_HOLD_1, TD_HOLD_2 and TD_HOLD_3 are ranges of td_state_t: nothing may sit between their two ends. */
+_Static_assert(JUST_HOLD == TAPPING + 1, "TD_HOLD_1 needs JUST_HOLD right after TAPPING");
+_Static_assert(TAP_AND_HOLD == DUAL_TAPPING + 1, "TD_HOLD_2 needs TAP_AND_HOLD right after DUAL_TAPPING");
+_Static_assert(TAP_TAP_HOLD == TRI_TAPPING + 1, "TD_HOLD_3 needs TAP_TAP_HOLD right after TRI_TAPPING");
+
 td_state_t current_dance(tap_dance_state_t *state) {
 #ifdef CONSOLE_ENABLE
     dprintf(
