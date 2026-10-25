@@ -1,0 +1,6 @@
+.build
+.vscode
+*.hex
+*.dxf
+*.elf
+targets

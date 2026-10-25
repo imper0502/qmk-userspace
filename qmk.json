@@ -1,0 +1,8 @@
+{
+    "userspace_version": "1.0",
+    "build_targets": [
+        ["pragmatic", "imper0502"],
+        ["temperance", "imper0502"],
+        ["pragmatic_classical", "default"]
+    ]
+}

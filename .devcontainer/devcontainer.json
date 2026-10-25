@@ -1,0 +1,50 @@
+{
+  "name": "QMK Workspace",
+  "image": "qmkfm/qmk_cli:latest",
+  // 在 container 建立前（在主機上執行，兩項並行）：
+  // 1. 初始化鍵盤 submodule（空資料夾掛載進去會蓋掉 qmk_firmware 對應路徑）
+  // 2. 把 qmk_firmware clone 進 named volume（只有第一次會執行）
+  "initializeCommand": {
+    "submodules": ["git", "submodule", "update", "--init"],
+    "qmk-firmware": [
+      "docker", "run", "--rm",
+      "-v", "qmk_firmware_dir:/qmk_firmware",
+      "qmkfm/qmk_cli:latest",
+      "sh", "-c", "[ -d /qmk_firmware/.git ] || qmk setup -y"
+    ]
+  },
+  // 龐大的 qmk_firmware 放在 named volume，不用每次重新 clone。
+  // 本 repo 是 QMK External Userspace，掛載在預設的 workspaceFolder，
+  // 再由 user.overlay_dir 疊加到 qmk_firmware 之上。
+  "mounts": [
+    "source=qmk_firmware_dir,target=/qmk_firmware,type=volume",
+    // External Userspace 的 overlay 不支援自訂 keyboard，需各自掛載到 qmk_firmware/keyboards
+    "source=${localWorkspaceFolder}/keyboards/pragmatic,target=/qmk_firmware/keyboards/pragmatic,type=bind",
+    "source=${localWorkspaceFolder}/keyboards/pragmatic_classical,target=/qmk_firmware/keyboards/pragmatic_classical,type=bind",
+    "source=${localWorkspaceFolder}/keyboards/temperance,target=/qmk_firmware/keyboards/temperance,type=bind",
+    // QMK 只在 qmk_firmware/layouts/default 驗證 community_layouts，layout 也需各自掛載
+    "source=${localWorkspaceFolder}/layouts/split_4x6_5,target=/qmk_firmware/layouts/default/split_4x6_5,type=bind",
+    "source=${localWorkspaceFolder}/layouts/split_4x6_3,target=/qmk_firmware/layouts/default/split_4x6_3,type=bind",
+    "source=${localWorkspaceFolder}/layouts/split_4x6_4,target=/qmk_firmware/layouts/default/split_4x6_4,type=bind",
+    "source=${localWorkspaceFolder}/layouts/split_6x6,target=/qmk_firmware/layouts/default/split_6x6,type=bind"
+  ],
+  "containerEnv": {
+    "QMK_HOME": "/qmk_firmware"
+  },
+  "postCreateCommand": "qmk config user.overlay_dir=${containerWorkspaceFolder}",
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.makefile-tools"
+      ],
+      "settings": {
+        "files.associations": {
+          "*.h": "c",
+          "rules.mk": "makefile"
+        }
+      }
+    }
+  }
+}
