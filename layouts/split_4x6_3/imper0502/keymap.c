@@ -21,8 +21,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BS] = LAYOUT_split_4x6_3(
         WC_LEFT, WC_RGHT, KC_AT  , KC_HASH, KC_LPRN, KC_RPRN,                   KC_CIRC, KC_AMPR, KC_ASTR, KC_DLR , KC_INS , KC_DEL ,
         KC_TAB , KC_Q   , KC_W   , KC_F   , KC_P   , KC_B   ,                   KC_J   , KC_L   , KC_U   , KC_Y   , KC_MINS, KC_EQL ,
-        MT_ESC , KC_A   , KC_R   , KC_S   , KC_T   , KC_G   ,                   KC_M   , KC_N   , KC_E   , KC_I   , KC_O   , MT_QUOT,
-        KC_LALT, KC_Z   , KC_X   , KC_C   , KC_D   , KC_V   ,                   KC_K   , KC_H   , KC_COMM, KC_DOT , KC_SLSH, KC_BSLS,
+        MT_ESC , KC_A   , KC_R   , KC_S   , KC_T   , KC_G   ,                   KC_M   , KC_N   , KC_E   , KC_I   , KC_O   , TD_QUOT,
+        KC_LALT, KC_Z   , KC_X   , KC_C   , KC_D   , KC_V   ,                   KC_K   , KC_H   , KC_COMM, KC_DOT , KC_SLSH, TD_BSLS,
                                             TD_LCTL, TD_SFT , TD_BSPC, TD_ENT , TD_SPC , TD_GRV 
     ),
     [_QW] = LAYOUT_split_4x6_3(

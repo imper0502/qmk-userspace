@@ -102,6 +102,8 @@ TEST_F(TapDanceRelease, Enter) { check(TD(ENTER_DANCE)); }
 TEST_F(TapDanceRelease, Space) { check(TD(SPACE_DANCE)); }
 TEST_F(TapDanceRelease, Backspace) { check(TD(BACKSPACE_DANCE)); }
 TEST_F(TapDanceRelease, Grave) { check(TD(GRAVE_DANCE)); }
+TEST_F(TapDanceRelease, Quote) { check(TD(QUOTE_DANCE)); }
+TEST_F(TapDanceRelease, Backslash) { check(TD(BACKSLASH_DANCE)); }
 TEST_F(TapDanceRelease, InsertPlus) { check(TD(INSERT_PLUS)); }
 
 class InsertPlusKey : public TestFixture {

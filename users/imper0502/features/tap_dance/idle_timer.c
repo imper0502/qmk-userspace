@@ -1,8 +1,8 @@
-/* Detects whether the keyboard has been idle for longer than TAPPING_TERM. Only the space bar and grave tap dances read it. */
+/* Detects whether the keyboard has been idle for longer than TAPPING_TERM. Only the tap dances that hold the FN layer read it. */
 
 #include "imper0502.h"
 
-#if IMPER0502_TD_THUMB || IMPER0502_TD_GRAVE
+#if IMPER0502_TD_LAYER
 bool is_idle_timeout = true;
 uint16_t is_idle_timer = 0;
 

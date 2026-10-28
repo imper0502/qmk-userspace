@@ -20,7 +20,6 @@
 
 #define MT_ESC  GUI_T(KC_ESC)
 #define MT_SLSH RGUI_T(KC_SLASH)
-#define MT_QUOT LALT_T(KC_QUOT)
 
 #define LA_LCTL LALT(KC_LCTL)
 #define LS_LCTL LSFT(KC_LCTL)
@@ -48,6 +47,10 @@
 #endif
 #if IMPER0502_TD_GRAVE
 #define TD_GRV  TD(GRAVE_DANCE)
+#endif
+#if IMPER0502_TD_EDGE
+#define TD_QUOT TD(QUOTE_DANCE)
+#define TD_BSLS TD(BACKSLASH_DANCE)
 #endif
 #if IMPER0502_TD_TABLE
 #define TD_RTAB TD(TABLE_DANCE)

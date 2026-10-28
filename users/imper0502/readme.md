@@ -10,8 +10,8 @@
 | `keymap.h` | 只給 `keymap.c` 引用:QMK 直接從 keymap 讀取的表(tap dance、key override、combo)與 keymap 用的巨集 |
 | `features/<feature>/` | 一個資料夾對應一組有關聯的開關,內含程式碼與該組的 `switches.h`(預設值與相依檢查) |
 | `features/switches.h` | 引入各資料夾的 `switches.h` |
-| `features/tap_dance/` | tap dance 的共用部分:`tap_dance.h/.c`(狀態與 `current_dance()`)、`layer_dance.c`(空白鍵、Enter、grave 共用的邏輯)、`tap_dance_actions.h`(QMK 讀取的 action 表)、`idle_timer.c`、`tapping_term.c` |
-| `features/tap_dance/keys/` | 一個鍵一個檔,放該鍵的 finished/reset 實作:`control.c`、`enter.c`、`space.c`、`backspace.c`(四者共用 `IMPER0502_TD_THUMB`)、`grave.c`、`insert_plus.c`、`minus.c`、`table.c`、`alt_table.c`。每個檔案由對應的 `IMPER0502_TD_*` 開關控制。其中 `enter.c`、`space.c`、`grave.c` 只定義各自的鍵碼與修飾鍵,邏輯共用 `layer_dance.c` |
+| `features/tap_dance/` | tap dance 的共用部分:`tap_dance.h/.c`(狀態與 `current_dance()`)、`layer_dance.c`(空白鍵、Enter、grave、引號與反斜線鍵共用的邏輯)、`tap_dance_actions.h`(QMK 讀取的 action 表)、`idle_timer.c`、`tapping_term.c` |
+| `features/tap_dance/keys/` | 一個鍵一個檔,放該鍵的 finished/reset 實作:`control.c`、`enter.c`、`space.c`、`backspace.c`(四者共用 `IMPER0502_TD_THUMB`)、`grave.c`、`quote.c`、`backslash.c`、`insert_plus.c`、`minus.c`、`table.c`、`alt_table.c`。每個檔案由對應的 `IMPER0502_TD_*` 開關控制。其中 `enter.c`、`space.c`、`grave.c`、`quote.c`、`backslash.c` 只定義各自的鍵碼與修飾鍵,邏輯共用 `layer_dance.c` |
 
 ## Feature switches
 
@@ -21,6 +21,7 @@
 |---|---|---|---|
 | `tap_dance/` | `IMPER0502_TD_THUMB` | 1 | `TD_LCTL`、`TD_ENT`、`TD_SPC`、`TD_BSPC` |
 | | `IMPER0502_TD_GRAVE` | 1 | `TD_GRV` |
+| | `IMPER0502_TD_EDGE` | 0 | `TD_QUOT`、`TD_BSLS` |
 | | `IMPER0502_TD_INSERT_PLUS` | 0 | `TD_INSP` |
 | | `IMPER0502_TD_MINUS` | 0 | `TD_MINS` |
 | | `IMPER0502_TD_TABLE` | 0 | `TD_RTAB` |
@@ -36,7 +37,7 @@
 | `leader/` | `LEADER_ENABLE = yes` |
 | `combo/` | `COMBO_ENABLE = yes` |
 | `led/` | 鍵盤定義了 `LED_PIN_ON_STATE`、`TXLED`、`RXLED` 才會編進去 |
-| `tap_dance/idle_timer.c` | 跟著 `IMPER0502_TD_THUMB`:只有拇指 tap dance 會讀 `is_idle_timeout` |
+| `tap_dance/idle_timer.c` | 跟著 `IMPER0502_TD_THUMB`、`IMPER0502_TD_GRAVE` 或 `IMPER0502_TD_EDGE`:按住會開 `_FN` 層的 tap dance 會讀 `is_idle_timeout` |
 
 `tap_dance/` 的開關需要 `TAP_DANCE_ENABLE = yes`,`IMPER0502_OVERRIDE_PUNCT` 需要 `KEY_OVERRIDE_ENABLE = yes`,不符合時編譯會出現 `#error`。keymap 用到的 `TD_*` 所對應的開關必須是 1,否則會出現 `undeclared` 錯誤。
 

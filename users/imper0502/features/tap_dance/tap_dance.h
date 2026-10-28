@@ -12,6 +12,10 @@ enum tap_dance_names {
 #if IMPER0502_TD_GRAVE
     GRAVE_DANCE,
 #endif
+#if IMPER0502_TD_EDGE
+    QUOTE_DANCE,
+    BACKSLASH_DANCE,
+#endif
 #if IMPER0502_TD_TABLE
     TABLE_DANCE,
 #endif
@@ -73,6 +77,10 @@ void td_backspace_reset(tap_dance_state_t *state, void *user_data);
 
 #if IMPER0502_TD_GRAVE
 extern td_layer_t td_grave;
+#endif
+#if IMPER0502_TD_EDGE
+extern td_layer_t td_quote;
+extern td_layer_t td_backslash;
 #endif
 #if IMPER0502_TD_TABLE
 void td_table_finished(tap_dance_state_t *state, void *user_data);

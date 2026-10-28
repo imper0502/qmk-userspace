@@ -23,7 +23,7 @@ enum layer_names {
 #endif
 
 /* Idle detection, see features/tap_dance/idle_timer.c */
-#if IMPER0502_TD_THUMB || IMPER0502_TD_GRAVE
+#if IMPER0502_TD_LAYER
 extern bool is_idle_timeout;
 extern uint16_t is_idle_timer;
 void idle_timer_task(void);
@@ -32,7 +32,6 @@ void idle_timer_task(void);
 #endif
 
 void led_indicators_task(void);
-
 
 #define LT_BTN3 LT(_FN, MS_BTN3)
 

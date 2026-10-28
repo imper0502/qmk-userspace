@@ -1,6 +1,6 @@
 #include "imper0502.h"
 
-#if IMPER0502_TD_THUMB || IMPER0502_TD_GRAVE
+#if IMPER0502_TD_LAYER
 static void td_layer_on(td_layer_t *key, uint8_t mods) {
     key->layer = true;
     key->mods = mods;
@@ -48,6 +48,9 @@ void td_layer_reset(tap_dance_state_t *state, void *user_data) {
     td_layer_t *key = user_data;
     if (key->layer) {
         layer_off(_FN);
+#ifdef DUMMY_MOD_NEUTRALIZER_KEYCODE
+        neutralize_flashing_modifiers(get_mods());
+#endif
         unregister_mods(key->mods);
     } else {
         unregister_code(key->keycode);

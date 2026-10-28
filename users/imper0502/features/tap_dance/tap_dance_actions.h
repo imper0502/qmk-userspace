@@ -14,6 +14,10 @@ tap_dance_action_t tap_dance_actions[] = {
 #if IMPER0502_TD_GRAVE
     [GRAVE_DANCE] = TD_LAYER(td_grave),
 #endif
+#if IMPER0502_TD_EDGE
+    [QUOTE_DANCE] = TD_LAYER(td_quote),
+    [BACKSLASH_DANCE] = TD_LAYER(td_backslash),
+#endif
 #if IMPER0502_TD_TABLE
     [TABLE_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_table_finished, td_table_reset),
 #endif

@@ -10,9 +10,7 @@
 #include "features/tap_dance/keys/shift.c"
 #include "features/tap_dance/keys/backspace.c"
 #include "features/tap_dance/keys/grave.c"
+#include "features/tap_dance/keys/quote.c"
+#include "features/tap_dance/keys/backslash.c"
 #include "features/tap_dance/keys/insert_plus.c"
 #include "features/tap_dance/idle_timer.c"
-
-void matrix_scan_user(void) {
-    idle_timer_task();
-}

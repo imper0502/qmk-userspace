@@ -8,4 +8,5 @@
 /* The tap dances under test. */
 #define IMPER0502_TD_THUMB 1
 #define IMPER0502_TD_GRAVE 1
+#define IMPER0502_TD_EDGE 1
 #define IMPER0502_TD_INSERT_PLUS 1
