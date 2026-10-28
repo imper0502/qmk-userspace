@@ -6,6 +6,7 @@
 
 | 路徑 | 內容 |
 |---|---|
+| `config.h` | 所有 `imper0502` keymap 共用的設定:retro tapping 與 neutralizer、one-shot 逾時、滑鼠鍵、LED。各 layout 的 `config.h` 只放功能開關與該 layout 自己的設定 |
 | `imper0502.h` / `imper0502.c` | 層名稱、共用巨集(`LT_BTN3`),以及 `matrix_scan_user`、`keyboard_post_init_user`、`process_record_user` |
 | `keymap.h` | 只給 `keymap.c` 引用:QMK 直接從 keymap 讀取的表(tap dance、key override、combo)與 keymap 用的巨集 |
 | `features/<feature>/` | 一個資料夾對應一組有關聯的開關,內含程式碼與該組的 `switches.h`(預設值與相依檢查) |
