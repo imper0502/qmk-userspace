@@ -1,0 +1,47 @@
+# temperance, imper0502 keymap (layouts/split_4x6_5/imper0502/keymap.c), keymap-drawer v0.23.0 format.
+# Draw it from the repository root:
+#   keymap draw keymap-drawer/temperance_imper0502.yaml > temperance_imper0502.svg
+layout:
+  qmk_info_json: layouts/split_4x6_5/info.json
+  layout_name: LAYOUT_split_4x6_5
+
+layers:
+  Base:
+    - ["Desk ←", "Desk →", "@", "#", "(", ")", "^", "&", "*", "$", "Ins", "Del"]
+    - ["Tab", "Q", "W", "F", "P", "B", "J", "L", "U", "Y", {t: "-", s: "_"}, {t: "=", s: "+"}]
+    - [{t: "Esc", h: "Win"}, "A", "R", "S", "T", "G", "M", "N", "E", "I", "O", {t: "'", s: "\"", h: "Win Fn"}]
+    - ["Alt", "Z", "X", "C", "D", "V", "K", "H", {t: ",", s: "<"}, {t: ".", s: ">"}, {t: "/", s: "?"}, {t: "\\", s: "|", h: "Alt Fn"}]
+    - ["Snip", {t: "Ctrl", h: "Ctrl"}, {t: "Sft", h: "Shift", s: "Caps Wd"}, {t: "Bksp", h: "Bksp"}, {t: "Enter", h: "Shift Fn"}, {t: "Space", h: "Fn"}, {t: "`", s: "~", h: "Ctrl Fn"}, ""]
+    - ["Alt Tab", ""]
+
+  QWERTY:
+    - ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "="]
+    - ["Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "-"]
+    - [{t: "Esc", h: "Win"}, "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'"]
+    - ["Shift", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "Shift"]
+    - [{t: "▽", type: trans}, {t: "▽", type: trans}, {t: "▽", type: trans}, {t: "▽", type: trans}, {t: "▽", type: trans}, {t: "▽", type: trans}, {t: "▽", type: trans}, {t: "▽", type: trans}]
+    - [{t: "▽", type: trans}, {t: "▽", type: trans}]
+
+  NumPad:
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", "Wh ↑", "Wh ←", "M ↑", "Wh →", "Btn4", "*", "7", "8", "9", "+", ""]
+    - ["", "Wh ↓", "M ←", "M ↓", "M →", "Btn5", "/", "4", "5", "6", "-", ""]
+    - ["", "", "", "", "", "NumPad", "%", "1", "2", "3", "=", ""]
+    - ["", "Btn1", "Btn3", "Btn2", "Enter", "0", ".", ""]
+    - ["", ""]
+
+  Mouse:
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["Tab", "QWERTY", "Swap Ctl Gui", "", "", "", "", "Btn4", "M ↑", "Btn5", "Wh ↑", ""]
+    - ["Esc", "Win", "Alt", "Shift", "Ctrl", "", "", "M ←", "M ↓", "M →", "Wh ↓", ""]
+    - ["", "", "", "", "", "", "Mouse", "Wh ←", "Wh ↑", "Wh →", "", ""]
+    - ["", "Ctrl", "Shift", "Alt", "Btn1", {t: "Btn3", h: "Fn"}, "Btn2", "Wh ↓"]
+    - ["", ""]
+
+  Fn:
+    - ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12"]
+    - ["Tab", "{", "7", "8", "9", "Base", "Base", "Home", "↑", "End", "}", "Tab"]
+    - ["Esc", "[", "4", "5", "6", "Caps", "Caps Wd", "←", "↓", "→", "]", "Esc"]
+    - [{t: "▽", type: trans}, "!", "1", "2", "3", "NumPad", "Mouse", "PgUp", ";", ":", "%", {t: "▽", type: trans}]
+    - [{t: "▽", type: trans}, ".", "0", "Bksp", "Enter", "PrtSc", "PgDn", ""]
+    - [{t: "▽", type: trans}, ""]

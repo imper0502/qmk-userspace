@@ -1,0 +1,67 @@
+# pragmatic, imper0502 keymap (layouts/split_4x6_4/imper0502/keymap.c), keymap-drawer v0.23.0 format.
+# Draw it from the repository root:
+#   keymap draw keymap-drawer/pragmatic_imper0502.yaml > pragmatic_imper0502.svg
+layout:
+  qmk_info_json: layouts/split_4x6_4/info.json
+  layout_name: LAYOUT_split_4x6_4
+
+draw_config:
+  key_w: 64
+  key_h: 60
+  svg_extra_style: |
+    rect.mod    { fill: #ffe3b8; }
+    rect.dance  { fill: #cdeccd; }
+    rect.layer  { fill: #dccfff; }
+    rect.mouse  { fill: #cfe6ff; }
+    rect.nav    { fill: #c9f0ec; }
+    rect.num    { fill: #fff3b0; }
+    rect.fkey   { fill: #dde5ee; }
+    rect.sym    { fill: #fbd3e4; }
+    rect.sys    { fill: #f6cccc; }
+    @media (prefers-color-scheme: dark) {
+      rect.mod    { fill: #6b5230; }
+      rect.dance  { fill: #34603a; }
+      rect.layer  { fill: #51407f; }
+      rect.mouse  { fill: #2f5a86; }
+      rect.nav    { fill: #2f6360; }
+      rect.num    { fill: #75692a; }
+      rect.fkey   { fill: #46505c; }
+      rect.sym    { fill: #7a3b57; }
+      rect.sys    { fill: #763939; }
+    }
+
+layers:
+  Base:
+    - [{t: "Desk ←", type: sys}, {t: "Desk →", type: sys}, {t: "@", type: sym}, {t: "#", type: sym}, {t: "(", type: sym}, {t: ")", type: sym}, {t: "^", type: sym}, {t: "&", type: sym}, {t: "*", type: sym}, {t: "$", type: sym}, {t: "Ins", type: sys}, {t: "Del", type: sys}]
+    - [{t: "Tab", type: sys}, "Q", "W", "F", "P", "B", "J", "L", "U", "Y", {t: "-", s: "_", type: sym}, {t: "=", s: "+", type: sym}]
+    - [{t: "Esc", h: "Win", type: mod}, "A", "R", "S", "T", "G", "M", "N", "E", "I", "O", {t: "'", s: "\"", h: "Win Fn", type: dance}]
+    - [{t: "Alt", type: mod}, "Z", "X", "C", "D", "V", "K", "H", {t: ",", s: "<", type: sym}, {t: ".", s: ">", type: sym}, {t: "/", s: "?", type: sym}, {t: "\\", s: "|", h: "Alt Fn", type: dance}]
+    - [{t: "Snip", type: sys}, {t: "Ctrl", h: "Ctrl", type: dance}, {t: "Sft", h: "Shift", s: "Caps Wd", type: dance}, {t: "Bksp", h: "Bksp", type: dance}, {t: "Enter", h: "Shift Fn", type: dance}, {t: "Space", h: "Fn", type: dance}, {t: "`", s: "~", h: "Ctrl Fn", type: dance}, ""]
+
+  QWERTY:
+    - [{t: "`", type: sym}, {t: "1", type: num}, {t: "2", type: num}, {t: "3", type: num}, {t: "4", type: num}, {t: "5", type: num}, {t: "6", type: num}, {t: "7", type: num}, {t: "8", type: num}, {t: "9", type: num}, {t: "0", type: num}, {t: "=", type: sym}]
+    - [{t: "Tab", type: sys}, "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", {t: "-", type: sym}]
+    - [{t: "Esc", h: "Win", type: mod}, "A", "S", "D", "F", "G", "H", "J", "K", "L", {t: ";", type: sym}, {t: "'", type: sym}]
+    - [{t: "Shift", type: mod}, "Z", "X", "C", "V", "B", "N", "M", {t: ",", type: sym}, {t: ".", type: sym}, {t: "/", type: sym}, {t: "Shift", type: mod}]
+    - [{t: "▽", type: trans}, {t: "▽", type: trans}, {t: "▽", type: trans}, {t: "▽", type: trans}, {t: "▽", type: trans}, {t: "▽", type: trans}, {t: "▽", type: trans}, {t: "▽", type: trans}]
+
+  NumPad:
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ["", {t: "Wh ↑", type: mouse}, {t: "Wh ←", type: mouse}, {t: "M ↑", type: mouse}, {t: "Wh →", type: mouse}, {t: "Btn4", type: mouse}, {t: "*", type: sym}, {t: "7", type: num}, {t: "8", type: num}, {t: "9", type: num}, {t: "+", type: sym}, ""]
+    - ["", {t: "Wh ↓", type: mouse}, {t: "M ←", type: mouse}, {t: "M ↓", type: mouse}, {t: "M →", type: mouse}, {t: "Btn5", type: mouse}, {t: "/", type: sym}, {t: "4", type: num}, {t: "5", type: num}, {t: "6", type: num}, {t: "-", type: sym}, ""]
+    - ["", "", "", "", "", {t: "NumPad", type: layer}, {t: "%", type: sym}, {t: "1", type: num}, {t: "2", type: num}, {t: "3", type: num}, {t: "=", type: sym}, ""]
+    - ["", {t: "Btn1", type: mouse}, {t: "Btn3", type: mouse}, {t: "Btn2", type: mouse}, {t: "Enter", type: sys}, {t: "0", type: num}, {t: ".", type: sym}, ""]
+
+  Mouse:
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - [{t: "Tab", type: sys}, {t: "QWERTY", type: layer}, {t: "Swap Ctl Gui", type: layer}, "", "", "", "", {t: "Btn4", type: mouse}, {t: "M ↑", type: mouse}, {t: "Btn5", type: mouse}, {t: "Wh ↑", type: mouse}, ""]
+    - [{t: "Esc", type: sys}, {t: "Win", type: mod}, {t: "Alt", type: mod}, {t: "Shift", type: mod}, {t: "Ctrl", type: mod}, "", "", {t: "M ←", type: mouse}, {t: "M ↓", type: mouse}, {t: "M →", type: mouse}, {t: "Wh ↓", type: mouse}, ""]
+    - ["", "", "", "", "", "", {t: "Mouse", type: layer}, {t: "Wh ←", type: mouse}, {t: "Wh ↑", type: mouse}, {t: "Wh →", type: mouse}, "", ""]
+    - ["", {t: "Ctrl", type: mod}, {t: "Shift", type: mod}, {t: "Alt", type: mod}, {t: "Btn1", type: mouse}, {t: "Btn3", h: "Fn", type: mouse}, {t: "Btn2", type: mouse}, {t: "Wh ↓", type: mouse}]
+
+  Fn:
+    - [{t: "F1", type: fkey}, {t: "F2", type: fkey}, {t: "F3", type: fkey}, {t: "F4", type: fkey}, {t: "F5", type: fkey}, {t: "F6", type: fkey}, {t: "F7", type: fkey}, {t: "F8", type: fkey}, {t: "F9", type: fkey}, {t: "F10", type: fkey}, {t: "F11", type: fkey}, {t: "F12", type: fkey}]
+    - [{t: "Tab", type: sys}, {t: "{", type: sym}, {t: "7", type: num}, {t: "8", type: num}, {t: "9", type: num}, {t: "Base", type: layer}, {t: "Base", type: layer}, {t: "Home", type: nav}, {t: "↑", type: nav}, {t: "End", type: nav}, {t: "}", type: sym}, {t: "Tab", type: sys}]
+    - [{t: "Esc", type: sys}, {t: "[", type: sym}, {t: "4", type: num}, {t: "5", type: num}, {t: "6", type: num}, {t: "Caps", type: sys}, {t: "Caps Wd", type: sys}, {t: "←", type: nav}, {t: "↓", type: nav}, {t: "→", type: nav}, {t: "]", type: sym}, {t: "Esc", type: sys}]
+    - [{t: "▽", type: trans}, {t: "!", type: sym}, {t: "1", type: num}, {t: "2", type: num}, {t: "3", type: num}, {t: "NumPad", type: layer}, {t: "Mouse", type: layer}, {t: "PgUp", type: nav}, {t: ";", type: sym}, {t: ":", type: sym}, {t: "%", type: sym}, {t: "▽", type: trans}]
+    - ["", {t: ".", type: sym}, {t: "0", type: num}, {t: "Bksp", type: sys}, {t: "Enter", type: sys}, {t: "PrtSc", type: sys}, {t: "PgDn", type: nav}, ""]
