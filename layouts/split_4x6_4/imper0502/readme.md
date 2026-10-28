@@ -15,11 +15,11 @@ LAYOUT_split_4x6_4
 └───┴───┴───┴───┴───┴───┘             └───┴───┴───┴───┴───┴───┘
                 ┌───┬───┬───┐     ┌───┬───┬───┐
             ┌───┤ctl│sft│bs │     │ent│spc│` ~├───┐
-            │i+ ├───┴───┴───┘     └───┴───┴───┤   │
+            │scr├───┴───┴───┘     └───┴───┴───┤   │
             └───┘                             └───┘
 ```
 
-`esc` is a mod-tap (gui), `'` taps a quote and holds Win with the `_FN` layer, `bs` is the backspace tap dance (hold is Backspace, one tap then hold is Ctrl+Shift); `i+` is the insert/plus tap dance. Shared code and the feature switches live in `users/imper0502`, see its readme.
+`esc` is a mod-tap (gui), `'` taps a quote and holds Win with the `_FN` layer, `bs` is the backspace tap dance (hold is Backspace, one tap then hold is Ctrl+Shift); `scr` is Win+Shift+S (screenshot). Shared code and the feature switches live in `users/imper0502`, see its readme.
 
 ## Compile
 
