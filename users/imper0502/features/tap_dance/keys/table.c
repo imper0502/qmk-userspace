@@ -1,5 +1,3 @@
-/* TD_RTAB. Built when IMPER0502_TD_TABLE is 1. */
-
 #include "imper0502.h"
 
 #if IMPER0502_TD_TABLE
@@ -22,7 +20,6 @@ void td_table_finished(tap_dance_state_t *state, void *user_data) {
         break;
     case DUAL_TAP:
     case TRI_TAP:
-        /* All taps but the last are tapped now, the last one stays down until reset. */
         for (uint8_t n = 1; n < state->count; n++) {
             tap_code(KC_TAB);
         }
@@ -38,7 +35,7 @@ void td_table_finished(tap_dance_state_t *state, void *user_data) {
 void td_table_reset(tap_dance_state_t *state, void *user_data) {
     switch (td_table_state) {
     case TD_HOLD_1:
-        layer_off(_FN); 
+        layer_off(_FN);
         unregister_mods(MOD_LCTL);
         break;
     case TD_HOLD_2:

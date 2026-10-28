@@ -27,7 +27,7 @@
 | | `IMPER0502_TD_TABLE` | 0 | `TD_RTAB` |
 | | `IMPER0502_TD_ALT_TABLE` | 0 | `TD_TABA` |
 | | `IMPER0502_TD_COMMA_DOT` | 0 | `TD_COMM`、`TD_DOT` |
-| `key_override/` | `IMPER0502_OVERRIDE_PUNCT` | 0 | Shift + `,` `.` `/` |
+| `key_override/` | `IMPER0502_OVERRIDE_PUNCT` | 0 | Shift + `,` `.` |
 
 下列 feature 沒有自訂開關,條件已經由 QMK 的旗標或硬體決定:
 

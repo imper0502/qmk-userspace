@@ -1,7 +1,6 @@
-/* Key overrides. They need KEY_OVERRIDE_ENABLE = yes. */
 #pragma once
 
-#ifndef IMPER0502_OVERRIDE_PUNCT    /* Shift + , . / */
+#ifndef IMPER0502_OVERRIDE_PUNCT
 #    define IMPER0502_OVERRIDE_PUNCT 0
 #endif
 

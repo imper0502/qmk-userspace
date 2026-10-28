@@ -1,4 +1,3 @@
-/* Combos */
 #pragma once
 
 const uint16_t PROGMEM left_outside_up_row_combo[] = {KC_W, KC_F, COMBO_END};
@@ -26,7 +25,6 @@ enum combos {
   RC_LOU, RC_LIU, RC_DU, RC_RIU, RC_ROU,
   RC_LH ,         RC_DH,         RC_RH ,
   RC_LOD, RC_LID, RC_DD, RC_RID, RC_ROD,
-  // Vertical Combo
   CC_LO, CC_LC, CC_LI,
   CC_RI, CC_RC, CC_RO,
   COMBO_LENGTH
@@ -38,11 +36,11 @@ combo_t key_combos[] = {
   [RC_LOU] = COMBO(left_outside_up_row_combo, KC_ENT),   [RC_ROU] = COMBO(right_outside_up_row_combo, KC_BSPC),
   [RC_LH]  = COMBO(left_home_row_combo, MO(_MK)),        [RC_RH]  = COMBO(right_home_row_combo, MO(_NP)),
   [RC_LOD] = COMBO(left_outside_down_row_combo, KC_DEL), [RC_ROD] = COMBO(right_outside_down_row_combo, KC_INS),
-  
-  [CC_LO] = COMBO(left_outside_col_combo, KC_LCBR), 
-  [CC_LC] = COMBO(left_center_col_combo, KC_LPRN), 
-  [CC_LI] = COMBO(left_inside_col_combo, KC_BSLS), 
-  
+
+  [CC_LO] = COMBO(left_outside_col_combo, KC_LCBR),
+  [CC_LC] = COMBO(left_center_col_combo, KC_LPRN),
+  [CC_LI] = COMBO(left_inside_col_combo, KC_BSLS),
+
   [CC_RI] = COMBO(right_inside_col_combo, KC_SLSH),
   [CC_RC] = COMBO(right_center_col_combo, KC_RPRN),
   [CC_RO] = COMBO(right_outside_col_combo, KC_RCBR)

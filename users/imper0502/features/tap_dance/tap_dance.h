@@ -1,4 +1,3 @@
-/* Tap Dance */
 #pragma once
 
 enum tap_dance_names {
@@ -31,7 +30,6 @@ enum tap_dance_names {
 #endif
 };
 
-/* Tap Dance */
 typedef enum {
     JUST_TAP, TAPPING     , JUST_HOLD   ,
     DUAL_TAP, DUAL_TAPPING, TAP_AND_HOLD,

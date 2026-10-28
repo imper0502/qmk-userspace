@@ -1,4 +1,3 @@
-/* Included by keymap.c only: QMK reads the tables below from the keymap itself. */
 #pragma once
 
 #include "imper0502.h"
@@ -22,7 +21,6 @@
 
 #define LT_SPC  LT(_FN, KC_SPACE)
 
-/* Tap dance keys: each exists only while its IMPER0502_TD_* switch is 1. */
 #if IMPER0502_TD_THUMB
 #define TD_LCTL TD(CONTROL_DANCE)
 #define TD_ENT  TD(ENTER_DANCE)

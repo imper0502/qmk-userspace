@@ -1,5 +1,3 @@
-/* Per-key tapping term. */
-
 #include "imper0502.h"
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {

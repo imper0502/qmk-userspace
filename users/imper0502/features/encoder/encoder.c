@@ -1,5 +1,3 @@
-/* Encoder 0: scroll, volume, history and word movement depending on the held modifiers. Built when the keyboard sets ENCODER_ENABLE. */
-
 #include "imper0502.h"
 
 #ifdef ENCODER_ENABLE

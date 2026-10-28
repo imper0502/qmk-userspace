@@ -1,5 +1,3 @@
-/* RX/TX LED indicators (caps lock and active layer). */
-
 #include "imper0502.h"
 
 void keyboard_pre_init_user(void) {

@@ -1,6 +1,5 @@
 #pragma once
 
-/* Feature switches: 1 = on, 0 = off. Defaults are in the switches.h in each folder of users/imper0502/features */
 #define IMPER0502_TD_THUMB 1
 #define IMPER0502_TD_GRAVE 1
 #define IMPER0502_TD_EDGE 1
@@ -10,7 +9,6 @@
 #define IMPER0502_TD_COMMA_DOT 0
 #define IMPER0502_OVERRIDE_PUNCT 0
 
-/* Tapping Config. */
 #define TAPPING_TERM 275
 #define TAPPING_TERM_PER_KEY
 #define TAPPING_FORCE_HOLD_PER_KEY

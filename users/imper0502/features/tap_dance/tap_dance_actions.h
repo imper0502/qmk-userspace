@@ -1,4 +1,3 @@
-/* Read by QMK from the keymap itself, so this is included by keymap.c only. */
 #pragma once
 
 #define TD_LAYER(key) {.fn = {td_layer_each_tap, td_layer_finished, td_layer_reset, NULL}, .user_data = (void *)&(key)}

@@ -1,5 +1,3 @@
-/* Detects whether the keyboard has been idle for longer than TAPPING_TERM. Only the tap dances that hold the FN layer read it. */
-
 #include "imper0502.h"
 
 #if IMPER0502_TD_LAYER

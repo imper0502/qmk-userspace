@@ -1,5 +1,3 @@
-/* Tap Dance */
-
 #include "imper0502.h"
 
 /* TD_HOLD_1, TD_HOLD_2 and TD_HOLD_3 are ranges of td_state_t: nothing may sit between their two ends. */

@@ -4,14 +4,11 @@
     #define LED_CAPS_LOCK_PIN RXLED
 #endif
 
-/* One Shot Keys Config. */
 #define ONESHOT_TIMEOUT 4096
 
-/* Retro Tapping Config. */
 #define RETRO_TAPPING
 #define DUMMY_MOD_NEUTRALIZER_KEYCODE KC_RIGHT_CTRL
 
-/* Mouse Keys Config: a keyboard that sets its own speeds keeps them. */
 #ifndef MK_KINETIC_SPEED
     #define MK_KINETIC_SPEED
 #endif
