@@ -67,6 +67,9 @@ make uninstall
 
 - `current_dance()` 依 tap 次數、按住與被打斷回傳的狀態。
 - 每個 tap dance(Control、Enter、Space、Grave、Insert plus)在每種 tap 次數、點按或按住之後,都不會留下卡住的按鍵或修飾鍵。
+- 左 Control 鍵每種手勢送出什麼:點一、二、三下各送一、二、三次 Ctrl;按住維持 Ctrl;點一下再按住送 Alt+Shift;點兩下再按住切換 `_MK` 層且不送 Ctrl。
+- 空白鍵、grave 與 Enter 鍵每種手勢:點 n 下送 n 個;按住開 `_FN` 層(grave 同時按住 Ctrl、Enter 同時按住 Shift);點一下再按住:空白鍵是 Ctrl+Shift、grave 是 Alt+Shift、Enter 是 Ctrl+Alt(都加上 `_FN` 層);點兩下以上再按住會重複送出;單擊被其他鍵打斷時,停頓後是層、打字中是該鍵本身。
+- Shift 鍵(取代 `OSM`,沒有鎖定):點一下只讓下一個鍵加 Shift;點兩下以上開啟 Caps Word,Caps Word 開著時點任何下數都是關閉它;按住是 Shift,按住時按其他鍵,那個鍵也有 Shift;點一下以上再按住是 Ctrl+Alt。
 
 QMK 只在 `qmk_firmware/tests/` 底下找測試,所以 `make test` 與 devcontainer 會把 `tests/imper0502` 和 `users/imper0502` 掛進去,在容器內執行 `make test:imper0502`。
 
