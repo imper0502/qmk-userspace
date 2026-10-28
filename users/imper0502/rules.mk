@@ -12,9 +12,6 @@ ifeq ($(strip $(TAP_DANCE_ENABLE)), yes)
     SRC += features/tap_dance/keys/space.c
     SRC += features/tap_dance/keys/grave.c
     SRC += features/tap_dance/keys/insert_plus.c
-    SRC += features/tap_dance/keys/alt_plus.c
-    SRC += features/tap_dance/keys/minus.c
-    SRC += features/tap_dance/keys/backslash.c
     SRC += features/tap_dance/keys/table.c
     SRC += features/tap_dance/keys/alt_table.c
 endif

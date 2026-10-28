@@ -7,17 +7,8 @@ enum tap_dance_names {
     ENTER_DANCE,
     SPACE_DANCE,
 #endif
-#if IMPER0502_TD_ALT_PLUS
-    ALT_PLUS,
-#endif
-#if IMPER0502_TD_MINUS
-    MINUS_DANCE,
-#endif
 #if IMPER0502_TD_GRAVE
     GRAVE_DANCE,
-#endif
-#if IMPER0502_TD_BACKSLASH
-    BACKSLASH_DANCE,
 #endif
 #if IMPER0502_TD_TABLE
     TABLE_DANCE,
@@ -56,22 +47,10 @@ void td_space_each_tap(tap_dance_state_t *state, void *user_data);
 void td_space_finished(tap_dance_state_t *state, void *user_data);
 void td_space_reset(tap_dance_state_t *state, void *user_data);
 #endif
-#if IMPER0502_TD_ALT_PLUS
-void td_alt_plus_finished(tap_dance_state_t *state, void *user_data);
-void td_alt_plus_reset(tap_dance_state_t *state, void *user_data);
-#endif
 
-#if IMPER0502_TD_MINUS
-void td_minus_finished(tap_dance_state_t *state, void *user_data);
-void td_minus_reset(tap_dance_state_t *state, void *user_data);
-#endif
 #if IMPER0502_TD_GRAVE
 void td_grave_finished(tap_dance_state_t *state, void *user_data);
 void td_grave_reset(tap_dance_state_t *state, void *user_data);
-#endif
-#if IMPER0502_TD_BACKSLASH
-void td_backslash_finished(tap_dance_state_t *state, void *user_data);
-void td_backslash_reset(tap_dance_state_t *state, void *user_data);
 #endif
 #if IMPER0502_TD_TABLE
 void td_table_finished(tap_dance_state_t *state, void *user_data);

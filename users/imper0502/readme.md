@@ -11,7 +11,7 @@
 | `features/<feature>/` | 一個資料夾對應一組有關聯的開關,內含程式碼與該組的 `switches.h`(預設值與相依檢查) |
 | `features/switches.h` | 引入各資料夾的 `switches.h` |
 | `features/tap_dance/` | tap dance 的共用部分:`tap_dance.h/.c`(狀態與 `current_dance()`)、`tap_dance_actions.h`(QMK 讀取的 action 表)、`idle_timer.c`、`tapping_term.c` |
-| `features/tap_dance/keys/` | 一個鍵一個檔,放該鍵的 finished/reset 實作:`left_control.c`、`enter.c`、`space.c`(三者共用 `IMPER0502_TD_THUMB`)、`grave.c`、`insert_plus.c`、`alt_plus.c`、`minus.c`、`backslash.c`、`table.c`、`alt_table.c`。每個檔案由對應的 `IMPER0502_TD_*` 開關控制 |
+| `features/tap_dance/keys/` | 一個鍵一個檔,放該鍵的 finished/reset 實作:`left_control.c`、`enter.c`、`space.c`(三者共用 `IMPER0502_TD_THUMB`)、`grave.c`、`insert_plus.c`、`minus.c`、`table.c`、`alt_table.c`。每個檔案由對應的 `IMPER0502_TD_*` 開關控制 |
 
 ## Feature switches
 
@@ -22,9 +22,7 @@
 | `tap_dance/` | `IMPER0502_TD_THUMB` | 1 | `TD_LCTL`、`TD_ENT`、`TD_SPC` |
 | | `IMPER0502_TD_GRAVE` | 1 | `TD_GRV` |
 | | `IMPER0502_TD_INSERT_PLUS` | 0 | `TD_INSP` |
-| | `IMPER0502_TD_ALT_PLUS` | 0 | `TD_ALTP` |
 | | `IMPER0502_TD_MINUS` | 0 | `TD_MINS` |
-| | `IMPER0502_TD_BACKSLASH` | 0 | `TD_BSLS` |
 | | `IMPER0502_TD_TABLE` | 0 | `TD_RTAB` |
 | | `IMPER0502_TD_ALT_TABLE` | 0 | `TD_TABA` |
 | | `IMPER0502_TD_COMMA_DOT` | 0 | `TD_COMM`、`TD_DOT` |
