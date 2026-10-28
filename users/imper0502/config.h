@@ -10,7 +10,6 @@
 /* Retro Tapping Config. */
 #define RETRO_TAPPING
 #define DUMMY_MOD_NEUTRALIZER_KEYCODE KC_RIGHT_CTRL
-#define MODS_TO_NEUTRALIZE { MOD_BIT(KC_LEFT_ALT), MOD_BIT(KC_RIGHT_ALT), MOD_BIT(KC_LEFT_GUI), MOD_BIT(KC_RIGHT_GUI)}
 
 /* Mouse Keys Config: a keyboard that sets its own speeds keeps them. */
 #ifndef MK_KINETIC_SPEED
