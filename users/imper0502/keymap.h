@@ -20,6 +20,7 @@
 
 #define MT_ESC  GUI_T(KC_ESC)
 #define MT_SLSH RGUI_T(KC_SLASH)
+#define MT_QUOT LALT_T(KC_QUOT)
 #define OS_LSFT OSM(MOD_LSFT)
 
 #define LA_LCTL LALT(KC_LCTL)
