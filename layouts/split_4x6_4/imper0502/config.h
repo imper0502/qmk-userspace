@@ -6,7 +6,6 @@
 
 /* One Shot Keys Config. */
 #define ONESHOT_TIMEOUT 4096
-#define ONESHOT_TAP_TOGGLE 4
 
 /* Retro Tapping Config. */
 #define RETRO_TAPPING

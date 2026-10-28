@@ -7,6 +7,7 @@
 #include "features/tap_dance/keys/left_control.c"
 #include "features/tap_dance/keys/enter.c"
 #include "features/tap_dance/keys/space.c"
+#include "features/tap_dance/keys/shift.c"
 #include "features/tap_dance/keys/backspace.c"
 #include "features/tap_dance/keys/grave.c"
 #include "features/tap_dance/keys/insert_plus.c"

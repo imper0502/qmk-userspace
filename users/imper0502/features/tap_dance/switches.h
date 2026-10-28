@@ -1,7 +1,7 @@
 /* Tap dance keys. They need TAP_DANCE_ENABLE = yes. */
 #pragma once
 
-#ifndef IMPER0502_TD_THUMB          /* TD_LCTL, TD_ENT, TD_SPC */
+#ifndef IMPER0502_TD_THUMB          /* TD_LCTL, TD_ENT, TD_SPC, TD_SFT */
 #    define IMPER0502_TD_THUMB 1
 #endif
 #ifndef IMPER0502_TD_GRAVE          /* TD_GRV */

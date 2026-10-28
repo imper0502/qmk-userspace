@@ -6,6 +6,7 @@ enum tap_dance_names {
     CONTROL_DANCE,
     ENTER_DANCE,
     SPACE_DANCE,
+    SHIFT_DANCE,
     BACKSPACE_DANCE,
 #endif
 #if IMPER0502_TD_GRAVE
@@ -62,6 +63,9 @@ void td_left_control_plus_reset(tap_dance_state_t *state, void *user_data);
 
 extern td_layer_t td_enter;
 extern td_layer_t td_space;
+
+void td_shift_finished(tap_dance_state_t *state, void *user_data);
+void td_shift_reset(tap_dance_state_t *state, void *user_data);
 
 void td_backspace_finished(tap_dance_state_t *state, void *user_data);
 void td_backspace_reset(tap_dance_state_t *state, void *user_data);
