@@ -2,7 +2,7 @@
 
 __attribute__ ((weak))
 void matrix_scan_user(void) {
-#if IMPER0502_TD_THUMB
+#if IMPER0502_TD_THUMB || IMPER0502_TD_GRAVE
     idle_timer_task();
 #endif
     led_indicators_task();

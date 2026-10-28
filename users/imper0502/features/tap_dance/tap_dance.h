@@ -43,21 +43,28 @@ typedef enum {
 
 td_state_t current_dance(tap_dance_state_t *state);
 
+typedef struct {
+    uint8_t keycode;
+    uint8_t hold_mods;
+    uint8_t tap_hold_mods;
+    uint8_t mods;
+    bool    layer;
+} td_layer_t;
+
+void td_layer_each_tap(tap_dance_state_t *state, void *user_data);
+void td_layer_finished(tap_dance_state_t *state, void *user_data);
+void td_layer_reset(tap_dance_state_t *state, void *user_data);
+
 #if IMPER0502_TD_THUMB
 void td_left_control_finished(tap_dance_state_t *state, void *user_data);
 void td_left_control_plus_reset(tap_dance_state_t *state, void *user_data);
 
-void td_enter_finished(tap_dance_state_t *state, void *user_data);
-void td_enter_reset(tap_dance_state_t *state, void *user_data);
-
-void td_space_each_tap(tap_dance_state_t *state, void *user_data);
-void td_space_finished(tap_dance_state_t *state, void *user_data);
-void td_space_reset(tap_dance_state_t *state, void *user_data);
+extern td_layer_t td_enter;
+extern td_layer_t td_space;
 #endif
 
 #if IMPER0502_TD_GRAVE
-void td_grave_finished(tap_dance_state_t *state, void *user_data);
-void td_grave_reset(tap_dance_state_t *state, void *user_data);
+extern td_layer_t td_grave;
 #endif
 #if IMPER0502_TD_TABLE
 void td_table_finished(tap_dance_state_t *state, void *user_data);

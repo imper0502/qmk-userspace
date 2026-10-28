@@ -23,7 +23,7 @@ enum layer_names {
 #endif
 
 /* Idle detection, see features/tap_dance/idle_timer.c */
-#if IMPER0502_TD_THUMB
+#if IMPER0502_TD_THUMB || IMPER0502_TD_GRAVE
 extern bool is_idle_timeout;
 extern uint16_t is_idle_timer;
 void idle_timer_task(void);

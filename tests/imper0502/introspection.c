@@ -3,6 +3,7 @@
 #include "imper0502.h"
 #include "features/tap_dance/tap_dance_actions.h"
 #include "features/tap_dance/tap_dance.c"
+#include "features/tap_dance/layer_dance.c"
 #include "features/tap_dance/keys/left_control.c"
 #include "features/tap_dance/keys/enter.c"
 #include "features/tap_dance/keys/space.c"

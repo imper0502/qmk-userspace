@@ -10,8 +10,8 @@
 | `keymap.h` | 只給 `keymap.c` 引用:QMK 直接從 keymap 讀取的表(tap dance、key override、combo)與 keymap 用的巨集 |
 | `features/<feature>/` | 一個資料夾對應一組有關聯的開關,內含程式碼與該組的 `switches.h`(預設值與相依檢查) |
 | `features/switches.h` | 引入各資料夾的 `switches.h` |
-| `features/tap_dance/` | tap dance 的共用部分:`tap_dance.h/.c`(狀態與 `current_dance()`)、`tap_dance_actions.h`(QMK 讀取的 action 表)、`idle_timer.c`、`tapping_term.c` |
-| `features/tap_dance/keys/` | 一個鍵一個檔,放該鍵的 finished/reset 實作:`left_control.c`、`enter.c`、`space.c`(三者共用 `IMPER0502_TD_THUMB`)、`grave.c`、`insert_plus.c`、`minus.c`、`table.c`、`alt_table.c`。每個檔案由對應的 `IMPER0502_TD_*` 開關控制 |
+| `features/tap_dance/` | tap dance 的共用部分:`tap_dance.h/.c`(狀態與 `current_dance()`)、`layer_dance.c`(空白鍵、Enter、grave 共用的邏輯)、`tap_dance_actions.h`(QMK 讀取的 action 表)、`idle_timer.c`、`tapping_term.c` |
+| `features/tap_dance/keys/` | 一個鍵一個檔,放該鍵的 finished/reset 實作:`left_control.c`、`enter.c`、`space.c`(三者共用 `IMPER0502_TD_THUMB`)、`grave.c`、`insert_plus.c`、`minus.c`、`table.c`、`alt_table.c`。每個檔案由對應的 `IMPER0502_TD_*` 開關控制。其中 `enter.c`、`space.c`、`grave.c` 只定義各自的鍵碼與修飾鍵,邏輯共用 `layer_dance.c` |
 
 ## Feature switches
 

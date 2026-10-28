@@ -1,14 +1,16 @@
 /* Read by QMK from the keymap itself, so this is included by keymap.c only. */
 #pragma once
 
+#define TD_LAYER(key) {.fn = {td_layer_each_tap, td_layer_finished, td_layer_reset, NULL}, .user_data = (void *)&(key)}
+
 tap_dance_action_t tap_dance_actions[] = {
 #if IMPER0502_TD_THUMB
     [CONTROL_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_left_control_finished, td_left_control_plus_reset),
-    [ENTER_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_enter_finished, td_enter_reset),
-    [SPACE_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(td_space_each_tap, td_space_finished, td_space_reset),
+    [ENTER_DANCE] = TD_LAYER(td_enter),
+    [SPACE_DANCE] = TD_LAYER(td_space),
 #endif
 #if IMPER0502_TD_GRAVE
-    [GRAVE_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_grave_finished, td_grave_reset),
+    [GRAVE_DANCE] = TD_LAYER(td_grave),
 #endif
 #if IMPER0502_TD_TABLE
     [TABLE_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_table_finished, td_table_reset),
