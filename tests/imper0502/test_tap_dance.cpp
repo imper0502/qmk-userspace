@@ -104,6 +104,33 @@ TEST_F(TapDanceRelease, Backspace) { check(TD(BACKSPACE_DANCE)); }
 TEST_F(TapDanceRelease, Grave) { check(TD(GRAVE_DANCE)); }
 TEST_F(TapDanceRelease, InsertPlus) { check(TD(INSERT_PLUS)); }
 
+class InsertPlusKey : public TestFixture {
+   protected:
+    bool sent(uint8_t keycode, uint8_t mods) const {
+        for (const auto& report : reports) {
+            if (report.mods != mods) continue;
+            for (unsigned i = 0; i < KEYBOARD_REPORT_KEYS; i++) {
+                if (report.keys[i] == keycode) return true;
+            }
+        }
+        return false;
+    }
+
+    TestDriver                     driver;
+    std::vector<report_keyboard_t> reports;
+};
+
+TEST_F(InsertPlusKey, ThreeTapsSelectAllWithoutPastingOverIt) {
+    EXPECT_CALL(driver, send_keyboard_mock(_)).WillRepeatedly(Invoke([&](report_keyboard_t& report) { reports.push_back(report); }));
+    layer_clear();
+    auto key = KeymapKey{0, 0, 0, TD(INSERT_PLUS)};
+    set_keymap({key});
+    for (int i = 0; i < 3; i++) tap_key(key);
+    idle_for(TAPPING_TERM * 2);
+    EXPECT_TRUE(sent(KC_A, MOD_BIT(KC_LCTL)));
+    EXPECT_FALSE(sent(KC_V, MOD_BIT(KC_LCTL)));
+}
+
 class LeftControl : public TestFixture {
    protected:
     KeymapKey key = KeymapKey{0, 0, 0, TD(CONTROL_DANCE)};
