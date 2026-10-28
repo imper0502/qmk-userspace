@@ -5,7 +5,7 @@
 
 tap_dance_action_t tap_dance_actions[] = {
 #if IMPER0502_TD_THUMB
-    [CONTROL_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_left_control_finished, td_left_control_plus_reset),
+    [CONTROL_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_control_finished, td_control_reset),
     [ENTER_DANCE] = TD_LAYER(td_enter),
     [SPACE_DANCE] = TD_LAYER(td_space),
     [SHIFT_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_shift_finished, td_shift_reset),

@@ -8,7 +8,7 @@ SRC += features/leader/leader.c
 ifeq ($(strip $(TAP_DANCE_ENABLE)), yes)
     SRC += features/tap_dance/tap_dance.c
     SRC += features/tap_dance/layer_dance.c
-    SRC += features/tap_dance/keys/left_control.c
+    SRC += features/tap_dance/keys/control.c
     SRC += features/tap_dance/keys/enter.c
     SRC += features/tap_dance/keys/space.c
     SRC += features/tap_dance/keys/shift.c

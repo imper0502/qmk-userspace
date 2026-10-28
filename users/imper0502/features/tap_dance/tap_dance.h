@@ -58,8 +58,8 @@ void td_layer_finished(tap_dance_state_t *state, void *user_data);
 void td_layer_reset(tap_dance_state_t *state, void *user_data);
 
 #if IMPER0502_TD_THUMB
-void td_left_control_finished(tap_dance_state_t *state, void *user_data);
-void td_left_control_plus_reset(tap_dance_state_t *state, void *user_data);
+void td_control_finished(tap_dance_state_t *state, void *user_data);
+void td_control_reset(tap_dance_state_t *state, void *user_data);
 
 extern td_layer_t td_enter;
 extern td_layer_t td_space;

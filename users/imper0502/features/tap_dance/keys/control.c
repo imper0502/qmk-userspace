@@ -3,7 +3,7 @@
 #if IMPER0502_TD_THUMB
 static td_state_t td_control_state;
 
-void td_left_control_finished(tap_dance_state_t *state, void *user_data) {
+void td_control_finished(tap_dance_state_t *state, void *user_data) {
     td_control_state = current_dance(state);
     switch (td_control_state)
     {
@@ -27,7 +27,7 @@ void td_left_control_finished(tap_dance_state_t *state, void *user_data) {
     return;
 }
 
-void td_left_control_plus_reset(tap_dance_state_t *state, void *user_data) {
+void td_control_reset(tap_dance_state_t *state, void *user_data) {
     switch (td_control_state)
     {
     case TD_HOLD_3:
