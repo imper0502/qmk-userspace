@@ -11,7 +11,7 @@ LAYOUT_split_4x6_4
 ├───┼───┼───┼───┼───┼───┤             ├───┼───┼───┼───┼───┼───┤
 │esc│ a │ r │ s │ t │ g │             │ m │ n │ e │ i │ o │' "│
 ├───┼───┼───┼───┼───┼───┤             ├───┼───┼───┼───┼───┼───┤
-│a&c│ z │ x │ c │ d │ v │             │ k │ h │, ;│. :│/ ?│\ |│
+│alt│ z │ x │ c │ d │ v │             │ k │ h │, <│. >│/ ?│\ |│
 └───┴───┴───┴───┴───┴───┘             └───┴───┴───┴───┴───┴───┘
                 ┌───┬───┬───┐     ┌───┬───┬───┐
             ┌───┤ctl│sft│bs │     │ent│spc│` ~├───┐
@@ -19,7 +19,7 @@ LAYOUT_split_4x6_4
             └───┘                             └───┘
 ```
 
-`esc` and `'` are mod-taps (gui and alt); `i+` is the insert/plus tap dance. Shared code and the feature switches live in `users/imper0502`, see its readme.
+`esc` is a mod-tap (gui), `'` taps a quote and holds Win with the `_FN` layer, `bs` is the backspace tap dance (hold is Backspace, one tap then hold is Ctrl+Shift); `i+` is the insert/plus tap dance. Shared code and the feature switches live in `users/imper0502`, see its readme.
 
 ## Compile
 
