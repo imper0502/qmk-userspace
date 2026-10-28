@@ -9,6 +9,9 @@ uint16_t is_idle_timer = 0;
 void post_process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
     case TO(_BS):
+    case TG(_NP):
+    case TG(_MK):
+    case KC_ESC:
         clear_mods();
     default:
         if (!record->event.pressed) {
