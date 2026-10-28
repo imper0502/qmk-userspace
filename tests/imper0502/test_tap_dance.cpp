@@ -100,5 +100,6 @@ class TapDanceRelease : public TestFixture {
 TEST_F(TapDanceRelease, LeftControl) { check(TD(CONTROL_DANCE)); }
 TEST_F(TapDanceRelease, Enter) { check(TD(ENTER_DANCE)); }
 TEST_F(TapDanceRelease, Space) { check(TD(SPACE_DANCE)); }
+TEST_F(TapDanceRelease, Backspace) { check(TD(BACKSPACE_DANCE)); }
 TEST_F(TapDanceRelease, Grave) { check(TD(GRAVE_DANCE)); }
 TEST_F(TapDanceRelease, InsertPlus) { check(TD(INSERT_PLUS)); }

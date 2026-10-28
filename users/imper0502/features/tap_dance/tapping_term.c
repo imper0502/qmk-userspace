@@ -11,7 +11,9 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 #if IMPER0502_TD_INSERT_PLUS
     case TD(INSERT_PLUS):
 #endif
-    case MT_BSPC:
+#if IMPER0502_TD_THUMB
+    case TD(BACKSPACE_DANCE):
+#endif
     case LT_BTN3:
         return TAPPING_TERM - 64;
     default:

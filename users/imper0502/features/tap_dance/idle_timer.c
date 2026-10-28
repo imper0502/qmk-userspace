@@ -8,9 +8,6 @@ uint16_t is_idle_timer = 0;
 
 void post_process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-    case KC_BSPC:
-    case MT_BSPC:
-        return;
     case TO(_BS):
         clear_mods();
     default:

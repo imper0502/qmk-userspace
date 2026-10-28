@@ -8,6 +8,7 @@ tap_dance_action_t tap_dance_actions[] = {
     [CONTROL_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_left_control_finished, td_left_control_plus_reset),
     [ENTER_DANCE] = TD_LAYER(td_enter),
     [SPACE_DANCE] = TD_LAYER(td_space),
+    [BACKSPACE_DANCE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_backspace_finished, td_backspace_reset),
 #endif
 #if IMPER0502_TD_GRAVE
     [GRAVE_DANCE] = TD_LAYER(td_grave),

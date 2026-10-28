@@ -1,4 +1,4 @@
-/* Included by every shared .c file: only what that code itself needs (layers, idle, MT_BSPC and LT_BTN3).
+/* Included by every shared .c file: only what that code itself needs (layers, idle and LT_BTN3).
  * Key macros for keymaps and the QMK tables live in keymap.h, which only keymap.c includes. */
 #pragma once
 
@@ -33,7 +33,6 @@ void idle_timer_task(void);
 
 void led_indicators_task(void);
 
-#define MT_BSPC ALT_T(KC_BSPC)
 
 #define LT_BTN3 LT(_FN, MS_BTN3)
 
