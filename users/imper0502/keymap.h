@@ -19,17 +19,8 @@
 #define WC_RGHT LWIN(C(KC_RIGHT))
 
 #define MT_ESC  GUI_T(KC_ESC)
-#define MT_SLSH RGUI_T(KC_SLASH)
-
-#define LA_LCTL LALT(KC_LCTL)
-#define LS_LCTL LSFT(KC_LCTL)
-#define LA_LSFT LALT(KC_LSFT)
 
 #define LT_SPC  LT(_FN, KC_SPACE)
-#define LM_AFN  LM(_FN, MOD_LALT)
-#define LM_CFN  LM(_FN, MOD_LCTL)
-#define LM_ACFN LM(_FN, MOD_LALT | MOD_LCTL)
-#define RA_RCTL RALT(KC_RCTL)
 
 /* Tap dance keys: each exists only while its IMPER0502_TD_* switch is 1. */
 #if IMPER0502_TD_THUMB

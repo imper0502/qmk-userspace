@@ -16,6 +16,12 @@
 #include QMK_KEYBOARD_H
 
 #include "keymap.h"
+#define ALT_SFT LALT(KC_LSFT)
+#define CTL_ALT LCTL(LALT(KC_NO))
+#define CTL_SFT LCTL(KC_LSFT)
+#define fCTLALT LM(_FN, MOD_LCTL | MOD_LALT)
+#define fCTLSFT LM(_FN, MOD_LCTL | MOD_LSFT)
+#define fALTSFT LM(_FN, MOD_LALT | MOD_LSFT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BS] = LAYOUT_split_4x6_2x3(
@@ -23,8 +29,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB , KC_Q   , KC_W   , KC_F   , KC_P   , KC_B   ,                   KC_J   , KC_L   , KC_U   , KC_Y   , KC_MINS, KC_EQL ,
         MT_ESC , KC_A   , KC_R   , KC_S   , KC_T   , KC_G   ,                   KC_M   , KC_N   , KC_E   , KC_I   , KC_O   , TD_QUOT,
         KC_LALT, KC_Z   , KC_X   , KC_C   , KC_D   , KC_V   ,                   KC_K   , KC_H   , KC_COMM, KC_DOT , KC_SLSH, TD_BSLS,
-                                            KC_LCTL, TD_SFT , KC_BSPC, KC_ENT , LT_SPC , KC_GRV ,
-                                            LA_LCTL, LS_LCTL, LA_LSFT, LM_AFN , LM_CFN , LM_ACFN
+                                            KC_LCTL, TD_SFT , KC_BSPC, TD_ENT , LT_SPC , TD_GRV ,
+                                            ALT_SFT, CTL_ALT, CTL_SFT, fCTLALT, fCTLSFT, fALTSFT
     ),
     [_QW] = LAYOUT_split_4x6_2x3(
         KC_GRV , KC_1   , KC_2   , KC_3   , KC_4   , KC_5   ,                   KC_6   , KC_7   , KC_8   , KC_9   , KC_0   , KC_EQL ,
@@ -51,8 +57,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
     [_FN] = LAYOUT_split_4x6_2x3(
-        KC_F1  , KC_F2  , KC_3   , KC_F4  , KC_F5  , KC_F6  ,                   KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 , KC_F12 ,
-        KC_TAB , KC_LCBR, KC_7   , KC_8   , KC_9   , XXXXXXX,                   XXXXXXX, KC_HOME, KC_UP  , KC_END , KC_RCBR, KC_TAB ,
+        KC_F1  , KC_F2  , KC_F3  , KC_F4  , KC_F5  , KC_F6  ,                   KC_F7  , KC_F8  , KC_F9  , KC_F10 , KC_F11 , KC_F12 ,
+        KC_TAB , KC_LCBR, KC_7   , KC_8   , KC_9   , TO(_BS),                   TO(_BS), KC_HOME, KC_UP  , KC_END , KC_RCBR, KC_TAB ,
         KC_ESC , KC_LBRC, KC_4   , KC_5   , KC_6   , KC_CAPS,                   CW_TOGG, KC_LEFT, KC_DOWN, KC_RGHT, KC_RBRC, KC_ESC ,
         _______, KC_EXLM, KC_1   , KC_2   , KC_3   , TG(_NP),                   TG(_MK), KC_PGUP, KC_SCLN, KC_COLN, KC_PERC, _______,
                                             KC_DOT , KC_0   , KC_BSPC, KC_ENT , KC_PSCR, KC_PGDN,
