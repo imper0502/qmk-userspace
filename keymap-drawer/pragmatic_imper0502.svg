@@ -133,17 +133,6 @@ rect.num   { fill: #e8dcae; }
 rect.fkey  { fill: #d3d6da; }
 rect.sym   { fill: #e4c9d0; }
 rect.sys   { fill: #dbb9b4; }
-@media (prefers-color-scheme: dark) {
-  rect.mod   { fill: #6f6150; }
-  rect.dance { fill: #566656; }
-  rect.layer { fill: #5f5873; }
-  rect.mouse { fill: #4f6275; }
-  rect.nav   { fill: #4f6866; }
-  rect.num   { fill: #766d4a; }
-  rect.fkey  { fill: #55595f; }
-  rect.sym   { fill: #75545e; }
-  rect.sys   { fill: #735350; }
-}
 </style>
 <g transform="translate(30, 0)" class="layer-Base">
 <text x="0" y="28" class="label" id="Base">Base:</text>
