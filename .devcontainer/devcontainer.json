@@ -1,33 +1,45 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/debian
 {
-    "name": "QMK CLI",
-    // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-    "image": "ghcr.io/qmk/qmk_cli",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "amodio.toggle-excluded-files",
-                "EditorConfig.EditorConfig",
-                "xaver.clang-format",
-                "llvm-vs-code-extensions.vscode-clangd",
-                "bierner.github-markdown-preview",
-                "donjayamanne.git-extension-pack",
-                "ms-vscode-remote.remote-containers"
-            ]
+  "name": "QMK Workspace",
+  "image": "qmkfm/qmk_cli:latest",
+  // 在 container 建立前（在主機上執行，兩項並行）：
+  // 1. 初始化鍵盤 submodule（空資料夾掛載進去會蓋掉 qmk_firmware 對應路徑）
+  // 2. 把 qmk_firmware clone 進 named volume（只有第一次會執行）
+  "initializeCommand": {
+    "submodules": ["git", "submodule", "update", "--init"],
+    "qmk-firmware": [
+      "docker", "run", "--rm",
+      "-v", "qmk_firmware_dir:/qmk_firmware",
+      "qmkfm/qmk_cli:latest",
+      "sh", "-c", "[ -d /qmk_firmware/.git ] || qmk setup -y"
+    ]
+  },
+  // 龐大的 qmk_firmware 放在 named volume，不用每次重新 clone。
+  // 本 repo 是 QMK External Userspace，掛載在這個 image 預設的 /qmk_userspace（環境變數 QMK_USERSPACE），
+  // 所以不用 qmk config user.overlay_dir。
+  // 自訂 keyboard、community layout 與 users 不在 userspace 範圍內，由 make link 用符號連結放進 qmk_firmware。
+  "workspaceMount": "source=${localWorkspaceFolder},target=/qmk_userspace,type=bind",
+  "workspaceFolder": "/qmk_userspace",
+  "mounts": [
+    "source=qmk_firmware_dir,target=/qmk_firmware,type=volume"
+  ],
+  "postStartCommand": "make link",
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "amodio.toggle-excluded-files",
+        "EditorConfig.EditorConfig",
+        "xaver.clang-format",
+        "llvm-vs-code-extensions.vscode-clangd",
+        "bierner.github-markdown-preview",
+        "ms-vscode.makefile-tools"
+      ],
+      "settings": {
+        "files.associations": {
+          "*.h": "c",
+          "rules.mk": "makefile"
         }
-    },
-    "postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/setup.sh ${containerWorkspaceFolder}"
-
-    // Features to add to the dev container. More info: https://containers.dev/features.
-    // "features": {},
-
-    // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    // "forwardPorts": [],
-
-    // Configure tool-specific properties.
-    // "customizations": {},
-
-    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-    // "remoteUser": "root"
+      }
+    }
+  }
 }

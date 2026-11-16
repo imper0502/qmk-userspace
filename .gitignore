@@ -1,16 +1,16 @@
-# Junk files
+.build
+.vscode
+*.hex
+*.dxf
+*.elf
+targets
 *.bak
 *.swp
 *~
 .DS_Store
 ._*
-
-# Firmware files
-*.hex
 *.bin
 *.uf2
-
-# clangd
 compile_commands.json
 .clangd/
 .cache/
