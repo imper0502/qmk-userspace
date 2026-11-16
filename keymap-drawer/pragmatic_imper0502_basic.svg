@@ -392,6 +392,58 @@ rect.sys    { fill: #f6cccc; }
 <g transform="translate(765, 308) rotate(-12.0)" class="key keypos-55">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key"/>
 </g>
+<g class="combo sys combopos-0">
+<rect rx="6" ry="6" x="193" y="112" width="28" height="26" class="combo sys"/>
+<text x="207" y="125" class="combo sys tap">Enter</text>
+</g>
+<g class="combo sys combopos-1">
+<rect rx="6" ry="6" x="743" y="112" width="28" height="26" class="combo sys"/>
+<text x="757" y="125" class="combo sys tap">Bksp</text>
+</g>
+<g class="combo sys combopos-2">
+<rect rx="6" ry="6" x="168" y="230" width="28" height="26" class="combo sys"/>
+<text x="182" y="243" class="combo sys tap">Del</text>
+</g>
+<g class="combo sys combopos-3">
+<rect rx="6" ry="6" x="768" y="230" width="28" height="26" class="combo sys"/>
+<text x="782" y="243" class="combo sys tap">Ins</text>
+</g>
+<g class="combo sym combopos-4">
+<rect rx="6" ry="6" x="216" y="148" width="28" height="26" class="combo sym"/>
+<text x="230" y="161" class="combo sym tap">{</text>
+</g>
+<g class="combo sym combopos-5">
+<rect rx="6" ry="6" x="275" y="161" width="28" height="26" class="combo sym"/>
+<text x="289" y="174" class="combo sym tap">(</text>
+</g>
+<g class="combo sym combopos-6">
+<rect rx="6" ry="6" x="334" y="173" width="28" height="26" class="combo sym"/>
+<text x="348" y="186" class="combo sym tap">\</text>
+</g>
+<g class="combo sym combopos-7">
+<rect rx="6" ry="6" x="602" y="173" width="28" height="26" class="combo sym"/>
+<text x="616" y="186" class="combo sym tap">/</text>
+</g>
+<g class="combo sym combopos-8">
+<rect rx="6" ry="6" x="661" y="161" width="28" height="26" class="combo sym"/>
+<text x="675" y="174" class="combo sym tap">)</text>
+</g>
+<g class="combo sym combopos-9">
+<rect rx="6" ry="6" x="720" y="148" width="28" height="26" class="combo sym"/>
+<text x="734" y="161" class="combo sym tap">}</text>
+</g>
+<g class="combo layer combopos-10">
+<path d="M224,190 l-39,-8" class="combo"/>
+<path d="M224,190 l39,8" class="combo"/>
+<rect rx="6" ry="6" x="210" y="177" width="28" height="26" class="combo layer"/>
+<text x="224" y="190" class="combo layer tap">Mouse</text>
+</g>
+<g class="combo layer combopos-11">
+<path d="M740,190 l-39,8" class="combo"/>
+<path d="M740,190 l39,-8" class="combo"/>
+<rect rx="6" ry="6" x="726" y="177" width="28" height="26" class="combo layer"/>
+<text x="740" y="190" class="combo layer tap">NumPad</text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 437)" class="layer-Fn">

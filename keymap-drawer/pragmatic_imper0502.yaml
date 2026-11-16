@@ -65,3 +65,19 @@ layers:
     - [{t: "Desk ←", type: sys}, {t: "Desk →", type: sys}, {t: "4", type: num}, {t: "5", type: num}, {t: "6", type: num}, {t: ".", type: sym}, {t: "Enter", type: sys}, {t: "←", type: nav}, {t: "↓", type: nav}, {t: "→", type: nav}, {t: "[", type: sym}, {t: "]", type: sym}]
     - [{t: "Base", type: layer}, {t: "NumPad", type: layer}, {t: "1", type: num}, {t: "2", type: num}, {t: "3", type: num}, {t: "PrtSc", type: sys}, {t: "Shift", type: mod}, {t: "PgUp", type: nav}, {t: ";", type: sym}, {t: ":", type: sym}, {t: "%", type: sym}, {t: "!", type: sym}]
     - ["", {t: ".", type: sym}, {t: "0", type: num}, {t: "Bksp", type: sys}, {t: "Enter", type: sys}, {t: "PrtSc", type: sys}, {t: "PgDn", type: nav}, ""]
+
+
+# Combos of users/imper0502/features/combo/combos.h (positions are the key indexes of the Base layer).
+combos:
+  - {p: [14, 15], k: {t: "Enter", type: sys}, l: [Base]}
+  - {p: [20, 21], k: {t: "Bksp", type: sys}, l: [Base]}
+  - {p: [38, 39], k: {t: "Del", type: sys}, l: [Base]}
+  - {p: [44, 45], k: {t: "Ins", type: sys}, l: [Base]}
+  - {p: [15, 27], k: {t: "{", type: sym}, l: [Base]}
+  - {p: [16, 28], k: {t: "(", type: sym}, l: [Base]}
+  - {p: [17, 29], k: {t: "\\", type: sym}, l: [Base]}
+  - {p: [18, 30], k: {t: "/", type: sym}, l: [Base]}
+  - {p: [19, 31], k: {t: ")", type: sym}, l: [Base]}
+  - {p: [20, 32], k: {t: "}", type: sym}, l: [Base]}
+  - {p: [26, 27, 28], k: {t: "Mouse", type: layer}, l: [Base]}
+  - {p: [31, 32, 33], k: {t: "NumPad", type: layer}, l: [Base]}
