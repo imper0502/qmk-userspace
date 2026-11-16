@@ -1,6 +1,6 @@
 # pragmatic, imper0502 keymap (layouts/split_4x6_4/imper0502/keymap.c), keymap-drawer v0.23.0 format.
 # Draw it from the repository root:
-#   keymap draw keymap-drawer/pragmatic_imper0502.yaml > pragmatic_imper0502.svg
+#   keymap draw keymap-drawer/pragmatic_imper0502.yaml > keymap-drawer/pragmatic_imper0502.svg
 layout:
   qmk_info_json: layouts/split_4x6_4/info.json
   layout_name: LAYOUT_split_4x6_4
@@ -9,25 +9,25 @@ draw_config:
   key_w: 64
   key_h: 60
   svg_extra_style: |
-    rect.mod    { fill: #ffe3b8; }
-    rect.dance  { fill: #cdeccd; }
-    rect.layer  { fill: #dccfff; }
-    rect.mouse  { fill: #cfe6ff; }
-    rect.nav    { fill: #c9f0ec; }
-    rect.num    { fill: #fff3b0; }
-    rect.fkey   { fill: #dde5ee; }
-    rect.sym    { fill: #fbd3e4; }
-    rect.sys    { fill: #f6cccc; }
+    rect.mod   { fill: #e3cfb4; }
+    rect.dance { fill: #c5d4c0; }
+    rect.layer { fill: #cfc6dc; }
+    rect.mouse { fill: #bccbd9; }
+    rect.nav   { fill: #bcd3d0; }
+    rect.num   { fill: #e8dcae; }
+    rect.fkey  { fill: #d3d6da; }
+    rect.sym   { fill: #e4c9d0; }
+    rect.sys   { fill: #dbb9b4; }
     @media (prefers-color-scheme: dark) {
-      rect.mod    { fill: #6b5230; }
-      rect.dance  { fill: #34603a; }
-      rect.layer  { fill: #51407f; }
-      rect.mouse  { fill: #2f5a86; }
-      rect.nav    { fill: #2f6360; }
-      rect.num    { fill: #75692a; }
-      rect.fkey   { fill: #46505c; }
-      rect.sym    { fill: #7a3b57; }
-      rect.sys    { fill: #763939; }
+      rect.mod   { fill: #6f6150; }
+      rect.dance { fill: #566656; }
+      rect.layer { fill: #5f5873; }
+      rect.mouse { fill: #4f6275; }
+      rect.nav   { fill: #4f6866; }
+      rect.num   { fill: #766d4a; }
+      rect.fkey  { fill: #55595f; }
+      rect.sym   { fill: #75545e; }
+      rect.sys   { fill: #735350; }
     }
 
 layers:
@@ -67,9 +67,9 @@ layers:
     - ["", {t: ".", type: sym}, {t: "0", type: num}, {t: "Bksp", type: sys}, {t: "Enter", type: sys}, {t: "PrtSc", type: sys}, {t: "PgDn", type: nav}, ""]
 
 
-# Combos of users/imper0502/features/combo/combos.h (positions are the key indexes of the Base layer).
+# Combos of users/imper0502/features/combo/combos.h (two-key combos, positions are the key indexes of the Base layer).
 combos:
-  - {p: [14, 15], k: {t: "Enter", type: sys}, l: [Base]}
+  - {p: [14, 15], k: {t: "Ent", type: sys}, l: [Base]}
   - {p: [20, 21], k: {t: "Bksp", type: sys}, l: [Base]}
   - {p: [38, 39], k: {t: "Del", type: sys}, l: [Base]}
   - {p: [44, 45], k: {t: "Ins", type: sys}, l: [Base]}
@@ -79,5 +79,3 @@ combos:
   - {p: [18, 30], k: {t: "/", type: sym}, l: [Base]}
   - {p: [19, 31], k: {t: ")", type: sym}, l: [Base]}
   - {p: [20, 32], k: {t: "}", type: sym}, l: [Base]}
-  - {p: [26, 27, 28], k: {t: "Mouse", type: layer}, l: [Base]}
-  - {p: [31, 32, 33], k: {t: "NumPad", type: layer}, l: [Base]}

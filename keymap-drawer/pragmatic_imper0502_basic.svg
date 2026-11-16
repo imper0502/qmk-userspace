@@ -124,25 +124,25 @@ path.combo {
 }
 /* End Tabler Icons Cleanup */
 
-rect.mod    { fill: #ffe3b8; }
-rect.dance  { fill: #cdeccd; }
-rect.layer  { fill: #dccfff; }
-rect.mouse  { fill: #cfe6ff; }
-rect.nav    { fill: #c9f0ec; }
-rect.num    { fill: #fff3b0; }
-rect.fkey   { fill: #dde5ee; }
-rect.sym    { fill: #fbd3e4; }
-rect.sys    { fill: #f6cccc; }
+rect.mod   { fill: #e3cfb4; }
+rect.dance { fill: #c5d4c0; }
+rect.layer { fill: #cfc6dc; }
+rect.mouse { fill: #bccbd9; }
+rect.nav   { fill: #bcd3d0; }
+rect.num   { fill: #e8dcae; }
+rect.fkey  { fill: #d3d6da; }
+rect.sym   { fill: #e4c9d0; }
+rect.sys   { fill: #dbb9b4; }
 @media (prefers-color-scheme: dark) {
-  rect.mod    { fill: #6b5230; }
-  rect.dance  { fill: #34603a; }
-  rect.layer  { fill: #51407f; }
-  rect.mouse  { fill: #2f5a86; }
-  rect.nav    { fill: #2f6360; }
-  rect.num    { fill: #75692a; }
-  rect.fkey   { fill: #46505c; }
-  rect.sym    { fill: #7a3b57; }
-  rect.sys    { fill: #763939; }
+  rect.mod   { fill: #6f6150; }
+  rect.dance { fill: #566656; }
+  rect.layer { fill: #5f5873; }
+  rect.mouse { fill: #4f6275; }
+  rect.nav   { fill: #4f6866; }
+  rect.num   { fill: #766d4a; }
+  rect.fkey  { fill: #55595f; }
+  rect.sym   { fill: #75545e; }
+  rect.sys   { fill: #735350; }
 }
 </style>
 <g transform="translate(30, 0)" class="layer-Base">
@@ -394,7 +394,7 @@ rect.sys    { fill: #f6cccc; }
 </g>
 <g class="combo sys combopos-0">
 <rect rx="6" ry="6" x="193" y="112" width="28" height="26" class="combo sys"/>
-<text x="207" y="125" class="combo sys tap">Enter</text>
+<text x="207" y="125" class="combo sys tap">Ent</text>
 </g>
 <g class="combo sys combopos-1">
 <rect rx="6" ry="6" x="743" y="112" width="28" height="26" class="combo sys"/>
@@ -431,18 +431,6 @@ rect.sys    { fill: #f6cccc; }
 <g class="combo sym combopos-9">
 <rect rx="6" ry="6" x="720" y="148" width="28" height="26" class="combo sym"/>
 <text x="734" y="161" class="combo sym tap">}</text>
-</g>
-<g class="combo layer combopos-10">
-<path d="M224,190 l-39,-8" class="combo"/>
-<path d="M224,190 l39,8" class="combo"/>
-<rect rx="6" ry="6" x="210" y="177" width="28" height="26" class="combo layer"/>
-<text x="224" y="190" class="combo layer tap">Mouse</text>
-</g>
-<g class="combo layer combopos-11">
-<path d="M740,190 l-39,8" class="combo"/>
-<path d="M740,190 l39,-8" class="combo"/>
-<rect rx="6" ry="6" x="726" y="177" width="28" height="26" class="combo layer"/>
-<text x="740" y="190" class="combo layer tap">NumPad</text>
 </g>
 </g>
 </g>
