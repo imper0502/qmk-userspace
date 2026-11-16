@@ -17,10 +17,12 @@
   // 本 repo 是 QMK External Userspace，掛載在這個 image 預設的 /qmk_userspace（環境變數 QMK_USERSPACE），
   // 所以不用 qmk config user.overlay_dir。
   // 自訂 keyboard、community layout 與 users 不在 userspace 範圍內，由 make link 用符號連結放進 qmk_firmware。
+  // 單元測試（make test:imper0502）只認 qmk_firmware/tests 底下的真實資料夾，符號連結找不到，所以用 bind mount。
   "workspaceMount": "source=${localWorkspaceFolder},target=/qmk_userspace,type=bind",
   "workspaceFolder": "/qmk_userspace",
   "mounts": [
-    "source=qmk_firmware_dir,target=/qmk_firmware,type=volume"
+    "source=qmk_firmware_dir,target=/qmk_firmware,type=volume",
+    "source=${localWorkspaceFolder}/tests/imper0502,target=/qmk_firmware/tests/imper0502,type=bind"
   ],
   "postStartCommand": "make link",
   "remoteUser": "root",

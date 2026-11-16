@@ -1,0 +1,14 @@
+#include "imper0502.h"
+
+#if IMPER0502_TD_ALT_TABLE
+void td_alt_tab_each_tap(tap_dance_state_t *state, void *user_data) {
+    if (state->count == 1) {
+        add_mods(MOD_LALT);
+    }
+    tap_code(KC_TAB);
+}
+
+void td_alt_tab_finished(tap_dance_state_t *state, void *user_data) {
+    del_mods(MOD_LALT);
+}
+#endif

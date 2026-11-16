@@ -1,0 +1,54 @@
+#pragma once
+
+#include "imper0502.h"
+
+#ifdef TAP_DANCE_ENABLE
+#    include "features/tap_dance/tap_dance_actions.h"
+#endif
+
+#ifdef KEY_OVERRIDE_ENABLE
+#    include "features/key_override/key_overrides.h"
+#endif
+
+#ifdef COMBO_ENABLE
+#    include "features/combo/combos.h"
+#endif
+
+#define WC_LEFT LWIN(C(KC_LEFT))
+#define WC_RGHT LWIN(C(KC_RIGHT))
+#define WC_D    LWIN(C(KC_D))
+#define WC_F4   LWIN(C(KC_F4))
+
+#define MT_ESC  GUI_T(KC_ESC)
+
+#define LT_SPC  LT(_FN, KC_SPACE)
+#define LT_BSPC LT(_NP, KC_BSPC)
+
+#if IMPER0502_TD_THUMB
+#define TD_CTL  TD(CONTROL_DANCE)
+#define TD_ALT  TD(ALT_DANCE)
+#define TD_ENT  TD(ENTER_DANCE)
+#define TD_SPC  TD(SPACE_DANCE)
+#define TD_SFT  TD(SHIFT_DANCE)
+#define TD_BSPC TD(BACKSPACE_DANCE)
+#endif
+#if IMPER0502_TD_INSERT_PLUS
+#define TD_INSP TD(INSERT_PLUS)
+#endif
+#if IMPER0502_TD_ALT_TABLE
+#define TD_TABA TD(ALT_TABLE)
+#endif
+#if IMPER0502_TD_GRAVE
+#define TD_GRV  TD(GRAVE_DANCE)
+#endif
+#if IMPER0502_TD_EDGE
+#define TD_QUOT TD(QUOTE_DANCE)
+#define TD_BSLS TD(BACKSLASH_DANCE)
+#endif
+#if IMPER0502_TD_TABLE
+#define TD_RTAB TD(TABLE_DANCE)
+#endif
+#if IMPER0502_TD_COMMA_DOT
+#define TD_COMM TD(COMMA_DANCE)
+#define TD_DOT  TD(DOT_DANCE)
+#endif
