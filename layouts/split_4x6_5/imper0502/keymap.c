@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         KC_TAB , MS_WHLU, MS_WHLL, MS_UP  , MS_WHLR, MS_BTN4,                   KC_PSLS, KC_P7  , KC_P8  , KC_P9  , KC_PMNS, XXXXXXX,
         KC_ESC , MS_WHLD, MS_LEFT, MS_DOWN, MS_RGHT, MS_BTN5,                   KC_PAST, KC_P4  , KC_P5  , KC_P6  , KC_PPLS, XXXXXXX,
-        TO(_BS), TG(_NP), TG(_NP), TG(_NP), TG(_NP), TG(_NP),                   KC_NUM , KC_P1  , KC_P2  , KC_P3  , KC_PEQL, XXXXXXX,
+        TO(_BS), TG(_NP), TG(_NP), TG(_NP), TG(_NP), TG(_NP),                   KC_NUM , KC_P1  , KC_P2  , KC_P3  , KC_EQL , XXXXXXX,
                                    XXXXXXX, MS_BTN1, MS_BTN3, MS_BTN2, KC_PENT, KC_P0  , KC_PDOT, XXXXXXX,
                                                               XXXXXXX, XXXXXXX
     ),
