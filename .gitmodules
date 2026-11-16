@@ -1,0 +1,9 @@
+[submodule "keyboards/pragmatic"]
+	path = keyboards/pragmatic
+	url = https://github.com/imper0502/qmk-kb-pragmatic.git
+[submodule "keyboards/pragmatic_classical"]
+	path = keyboards/pragmatic_classical
+	url = https://github.com/imper0502/qmk-kb-pragmatic-classical.git
+[submodule "keyboards/temperance"]
+	path = keyboards/temperance
+	url = https://github.com/imper0502/qmk-kb-temperance.git
